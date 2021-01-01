@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useState, useRef, useEffect } from 'react'
 
 export const Nav = styled.nav`
   background: #222222 !important;
@@ -444,10 +445,10 @@ export const FooterText = styled.p`
 `
 
 export const FadeInSection = (props) => {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
-  
-  React.useEffect(() => {
+  const [isVisible, setVisible] = useState(false);
+  const domRef = useRef();
+
+  useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setVisible(entry.isIntersecting));
     });

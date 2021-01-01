@@ -10,6 +10,8 @@
   "dependencies": {
     "next": "10.0.4",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-scrollspy": "^3.4.3",
+    "styled-components": "^5.2.1"
   }
 }

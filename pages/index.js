@@ -32,7 +32,7 @@ import {
 
 export default function Home() {
 	const [filter, setFilter] = useState('Projects');
-	const [projects, setProjects] = useState([]);
+	const [projects, setProjects] = useState(PROJECTS);
 
 	return(
 		<>
@@ -93,14 +93,19 @@ export default function Home() {
 						<FadeInSection>
 							<FlexRow>
 								{projects.filter(project => project.content_type === filter).map((project, index) =>
-									<ItemContainer marginTop={'60px'} marginRight={(process.browser && window.innerWidth >= 1200) ? ((index + 1) % 3 === 0 ? '0px': '50px') : (process.browser && window.innerWidth >= 480) ? ((index + 1) % 2 === 0 ? '0px': '50px') : '0px'}>
+									<ItemContainer index={index} marginTop="60px" >
 										<ItemColumn>
-											<div style={{width: '100%', maxHeight: 250, overflow: 'hidden', marginBottom: 20}}>
-												<img style={{width: '100%'}} src={project.image}></img>
+											<div style={{ 
+												width: '100%', 
+												maxHeight: 250, 
+												overflow: 'hidden', 
+												marginBottom: 20 
+											}}>
+												<img style={{ width: '100%' }} src={project.image} />
 											</div>
 											<FlexRow>
 												{project.labels.map((label) =>
-													<ItemLabel color={label.color}>{label.name}</ItemLabel>
+													<ItemLabel color="black">{label}</ItemLabel>
 												)}
 											</FlexRow>
 											{filter !== 'Newsletters' ?

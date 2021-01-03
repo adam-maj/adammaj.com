@@ -353,15 +353,17 @@ export const ItemContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-right: ${({ marginRight }) => marginRight};
+  margin-right: 0px;
   margin-top: ${({ marginTop }) => marginTop };
 
   @media (min-width: 480px) {
+    margin-right: ${props => (props.index + 1) % 2 === 0 ? '0px' : '50px'};
     min-width: 250px;
     width: calc((100vw - 350px)/2);
   }
 
   @media (min-width: 1200px) {
+    margin-right: ${props => (props.index + 1) % 3 === 0 ? '0px' : '50px'};
     min-width: 250px;
     width: calc((100vw - 400px)/3);
 }

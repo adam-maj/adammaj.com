@@ -8,6 +8,16 @@ export const Section = styled.section`
   padding-right: 35px;
 
   @media (min-width: 480px) {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+
+  @media (min-width: 640px) {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+
+  @media (min-width: 768px) {
     flex-direction: row;
     padding-left: 150px;
     padding-right: 150px;
@@ -117,10 +127,26 @@ export const Header = styled.h1`
   margin-bottom: 15px;
 
   @media (min-width: 480px) {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 46px;
+    max-width: calc(100vw - 50px);
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 48px;
+    line-height: 58px;
+    max-width: calc(100vw - 200px);
+  }
+
+  @media (min-width: 1500px) {
     font-size: 60px;
     line-height: 70px;
-    max-width: 1400px;
-    margin-bottom: 25px;
   }
 `
 export const HeaderLine = styled.hr`
@@ -356,7 +382,15 @@ export const ItemContainer = styled.div`
   margin-right: 0px;
   margin-top: ${({ marginTop }) => marginTop };
 
-  @media (min-width: 480px) {
+  @media(min-width: 480px) {
+    width: 70vw;
+  }
+
+  @media(min-width: 640px) {
+    width: 60vw;
+  }
+
+  @media (min-width: 850px) {
     margin-right: ${props => (props.index + 1) % 2 === 0 ? '0px' : '50px'};
     min-width: 250px;
     width: calc((100vw - 350px)/2);

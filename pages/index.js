@@ -40,7 +40,7 @@ export default function Home() {
 			<Navbar />
 			<HeroSection id="home">
 				<FadeInSection>
-					<Header id="home">Hi, I'm <Name>Adam Majmudar</Name>, Neuroscience Enthusiast, Machine Learning Engineer, & Full Stack Developer.</Header>
+					<Header id="home">Hi, I'm <Name>Adam Majmudar</Name>, Startup Founder, Neuroscience Enthusiast, Machine Learning Engineer, & Full Stack Developer.</Header>
 				</FadeInSection>
 				<FadeInSection>
 					<Socials id={0}/>
@@ -55,11 +55,12 @@ export default function Home() {
 						</FadeInSection>
 						<FadeInSection>
 							<Text>
-								I’m a 17-year-old focused on building products that solve problems and developing new skills (currently learning about SEO, sales, and marketing).
+								I’m a 17-year-old focused on building products that solve problems, working on startup ideas, and developing new skills (currently learning about SEO, sales, and marketing).
 								<br/><br/>
-								In the past, I’ve worked on machine learning solutions at <a style={{color: 'white', fontWeight: 700}} href="https://dovetale.com/" target="_blank">Dovetale</a>
-								&nbsp;and I'm an alumni of <a style={{color: 'white', fontWeight: 700}} href="https://tks.world/" target="_blank">The Knowledge Society.</a>
-								&nbsp;Currently, I’m an engineering student at the University of Pennsylvania.
+								Currently, I work as the product manager at <a style={{ color: 'white', fontWeight: 700 }} href="https://ascendbuild.co" target="_blank">Ascend</a>.
+								I also work as a machine learning developer and software engineer at <a style={{color: 'white', fontWeight: 700}} href="https://dovetale.com/" target="_blank">Dovetale</a>
+								&nbsp;, and I'm an alumni of <a style={{color: 'white', fontWeight: 700}} href="https://tks.world/" target="_blank">The Knowledge Society.</a>
+								&nbsp;I’m also an engineering student at the University of Pennsylvania.
 								<br/><br/>
 								<Text style={{fontWeight: 700}}>I'm most interested in:</Text>
 								<ul>
@@ -99,7 +100,8 @@ export default function Home() {
 												width: '100%', 
 												maxHeight: 250, 
 												overflow: 'hidden', 
-												marginBottom: 20 
+												marginBottom: 20,
+												borderRadius: '16px'
 											}}>
 												<img style={{ width: '100%' }} src={project.image} />
 											</div>

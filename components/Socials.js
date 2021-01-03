@@ -4,10 +4,11 @@ import styled from 'styled-components'
 const Social = styled.li`
   display: flex;
   align-items: center;
+  height: 40px;
 
   & > a > i {
-    color: white !important;
-    margin-right: 40px !important;
+    color: white;
+    margin-right: 40px;
   }
 `
 

@@ -10,7 +10,21 @@ import styled from 'styled-components'
 const Social = styled.li`
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 32px;
+  height: 40px;
+  width: 40px;
+
+  @media (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+    margin-right: 24px;
+  }
+
+  @media (max-width: 480px) {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+  }
 `
 
 export default function Socials({ id }) {

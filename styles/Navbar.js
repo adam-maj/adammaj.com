@@ -15,13 +15,13 @@ export const Nav = styled.nav`
   }
 `
 export const Navlink = styled.a`
-  font-family: 'Raleway';
+  font-family: 'Rubik';
   font-weight: 400;
   font-size: 20px !important;
   margin-right: 30px;
 `
 export const Brand = styled.a`
-  font-family: 'Raleway' !important;
+  font-family: 'Rubik' !important;
   font-weight: 800 !important;
   font-size: 35px !important;
   color: white !important;

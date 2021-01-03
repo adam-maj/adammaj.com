@@ -110,7 +110,7 @@ export const Column = styled.div`
   }
 `
 export const Header = styled.h1`
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 800;
   font-size: 24px;
   color: white;
@@ -140,7 +140,7 @@ export const Name = styled.span`
   color: #33CCFE
 `
 export const Text = styled.p`
-  font-family: 'Raleway';
+  font-family: 'Rubik';
   font-weight: 300;
   font-size: 16px;
   color: white;
@@ -212,7 +212,7 @@ export const FlexRow = styled.div`
   flex-wrap: wrap;
 `
 export const Filter = styled.button`
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   font-weight: 300;
   margin-right: 10px;
@@ -234,7 +234,7 @@ export const Filter = styled.button`
   }
 `
 export const ItemTitle = styled.h2`
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 700;
   color: white;
   font-size: 24px;
@@ -260,7 +260,7 @@ export const ItemTitle = styled.h2`
   }
 `
 export const ItemDate = styled.h3`
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
   color: white;
   font-size: 18px;
@@ -294,7 +294,7 @@ export const ItemDate = styled.h3`
   }
 `
 export const ItemDescription = styled.p`
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 300;
   color: white;
   margin-bottom: 25px;
@@ -338,7 +338,7 @@ export const LinkButton = styled.button`
   margin-right: 10px;
   margin-bottom: 10px;
   font-size: 16px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   
   &:hover {
     opacity: 0.75 !important;
@@ -376,7 +376,7 @@ export const ItemColumn = styled.div`
 `
 export const Interest = styled.li`
   color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   font-weight: 300;
 
@@ -415,7 +415,7 @@ export const Footer = styled.footer`
 `
 
 export const FooterText = styled.p`
-  font-family: 'Raleway';
+  font-family: 'Rubik';
   font-weight: 300;
   font-size: 16px;
   color: white;

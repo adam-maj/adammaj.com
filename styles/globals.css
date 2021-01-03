@@ -1,3 +1,18 @@
 html {
   background: #222222;
 }
+li.is-current > a {
+  color: white !important;
+}
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(10vh);
+    visibility: hidden;
+    transition: opacity 1.5s ease-out, transform 0.8s ease-out;
+    will-change: opacity, visibility;
+  }
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}

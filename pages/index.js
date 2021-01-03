@@ -43,7 +43,7 @@ export default function Home() {
 					<Header id="home">Hi, I'm <Name>Adam Majmudar</Name>, Neuroscience Enthusiast, Machine Learning Engineer, & Full Stack Developer.</Header>
 				</FadeInSection>
 				<FadeInSection>
-					<Socials />
+					<Socials id={0}/>
 				</FadeInSection>
 			</HeroSection>
 			<AboutSection id="about">
@@ -134,7 +134,7 @@ export default function Home() {
 				<HeaderLine style={{marginLeft: 'auto', height: 5, marginBottom: 0}}/>
 				<Brand>Adam.</Brand>
 					<FlexRow>
-						<Socials />
+						<Socials id={6}/>
 					</FlexRow>
 					<FooterText><small>&copy; Copyright 2020, Adam Majmudar. All rights reserved.</small></FooterText>
 			</Footer>

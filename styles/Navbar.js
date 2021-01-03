@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 
 export const Nav = styled.nav`
@@ -22,9 +21,9 @@ export const Navlink = styled.a`
   margin-right: 30px;
 `
 export const Brand = styled.a`
-  font-family: 'Raleway';
-  font-weight: 800;
-  font-size: 35px;
+  font-family: 'Raleway' !important;
+  font-weight: 800 !important;
+  font-size: 35px !important;
   color: white !important;
   text-decoration: none !important;
   margin-bottom: 0px;

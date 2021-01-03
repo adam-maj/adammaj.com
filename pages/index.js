@@ -127,7 +127,7 @@ export default function Home() {
 			</ItemSection>
 			<Footer>
 				<HeaderLine style={{marginLeft: 'auto', height: 5, marginBottom: 0}}/>
-				<Brand class="navbar-brand" href="#">Adam.</Brand>
+				<Brand>Adam.</Brand>
 					<FlexRow>
 						<Socials />
 					</FlexRow>

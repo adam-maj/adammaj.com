@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { useState, useRef, useEffect } from 'react'
 
 export const Section = styled.section`
   background: #222222;
@@ -419,25 +418,3 @@ export const FooterText = styled.p`
   font-size: 16px;
   color: white;
 `
-
-export const FadeInSection = (props) => {
-  const [isVisible, setVisible] = useState(false);
-  const domRef = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
-  }, []);
-
-  return (
-    <div
-      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-      ref={domRef}
-    >
-      {props.children}
-    </div>
-  );
-}

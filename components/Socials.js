@@ -6,8 +6,8 @@ const Social = styled.li`
   align-items: center;
 
   & > a > i {
-    color: white;
-    margin-right: 40px;
+    color: white !important;
+    margin-right: 40px !important;
   }
 `
 

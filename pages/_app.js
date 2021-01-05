@@ -2,9 +2,25 @@ import '../styles/globals.css'
 import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
+  function injectGA() {
+    if (typeof window == 'undefined') {
+      return;
+    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+  
+    gtag('config', 'G-M61FCSRJR9');
+  };
+
   return (
     <>
       <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M61FCSRJR9"></script>
+        <script>{injectGA()}</script>
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />

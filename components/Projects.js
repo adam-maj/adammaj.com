@@ -1,6 +1,22 @@
 export const PROJECTS = [
   {
     content_type: 'Projects',
+    title: "InboxSquad",
+    date: "Jan 2021",
+    description: "InboxSquad is a platform that enables creators and influencers to take control of their own audience and build a community around their brand.",
+    links: "View Website  https://inboxsquad.co",
+    image: "https://media.istockphoto.com/vectors/vector-illustration-in-flat-simple-style-with-characters-influencer-vector-id1087891616?k=6&m=1087891616&s=612x612&w=0&h=u8eihyx_YAueQy51_AXXkP7T2_LZScdexShrNeIxQbs=",
+    labels: ['Startup', 'Web Development', 'DevOps', 'Express', 'React', 'NextJS', 'PostgreSQL']
+  }, {
+    content_type: 'Projects',
+    title: "Ascend",
+    date: "Dec 2020",
+    description: "Real estate data aggregation and search platform used by several Canadian real estate agencies (5000+ properties each). I'm the product manager and developer.",
+    links: "View Website  https://ascendbuild.co",
+    image: "https://static.vecteezy.com/system/resources/previews/000/661/920/non_2x/real-estate-isometric-illustration-vector-graphic.jpg",
+    labels: ['Startup', 'Web Development', 'React', 'Express', 'Node', 'PostgreSQL']
+  }, {
+    content_type: 'Projects',
     title: 'Prickle Productivity',
     date: 'Aug 2020',
     description: 'A productivity solution for groups. Enables friends and families to keep each other accountable and grow together.',

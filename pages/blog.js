@@ -10,10 +10,10 @@ export async function getServerSideProps({ ctx }) {
   }
 }
 
-export default function Thoughts({ posts }) {
+export default function Blog({ posts }) {
   return (
     <>
-      <Navbar />
+      <Navbar blog/>
       <Section bg="dark">
         <Flex direction="column" align="flex-start">
           <Heading>Welcome to my blog!</Heading>

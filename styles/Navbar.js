@@ -19,6 +19,7 @@ export const Navlink = styled.a`
   font-weight: 400;
   font-size: 20px !important;
   margin-right: 30px;
+  color: ${props => props.white && 'white !important'}
 `
 export const Brand = styled.a`
   font-family: 'Rubik' !important;

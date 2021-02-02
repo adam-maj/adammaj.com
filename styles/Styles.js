@@ -97,6 +97,7 @@ export const Section = styled.div`
   padding: 100px 20px 20px 20px;
   ${padding}
   ${margin}
+  ${color}
 `
 
 export const Nav = styled.nav`

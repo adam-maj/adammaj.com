@@ -1,6 +1,8 @@
+import { Section, Flex, Heading, Text } from '../styles/Styles'
+import Navbar from '../components/Navbar'
 
 export async function getServerSideProps({ ctx }) {
-  const res = await fetch(`${process.env.API_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}`)
+  const res = await fetch(`${process.env.API_URL}/ghost/api/v3/content/posts/?key=${process.env.CONTENT_API_KEY}&fields=title,slug,reading_time,feature_image`)
   const { posts } = await res.json()
 
   return {
@@ -9,10 +11,17 @@ export async function getServerSideProps({ ctx }) {
 }
 
 export default function Thoughts({ posts }) {
-  console.log(posts)
-
   return (
     <>
+      <Navbar />
+      <Section bg="dark">
+        <Flex direction="column" align="flex-start">
+          <Heading>Welcome to my blog!</Heading>
+          {posts.map(post =>
+            <Text>{post.title}</Text>
+          )}
+        </Flex>
+      </Section>
     </>
   )
 }

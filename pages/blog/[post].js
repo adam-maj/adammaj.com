@@ -1,4 +1,5 @@
 import { Section, Text, Flex, Heading } from '../../styles/Styles'
+import Navbar from '../../components/Navbar'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import Link from 'next/Link'
@@ -8,8 +9,7 @@ const Container = styled.div`
   padding-bottom: 120px;
 
   & > * {
-    color: white;
-    font-family: 'Rubik', sans-serif;
+    /* font-family: 'Rubik', sans-serif; */
   }
 
   & img {
@@ -41,19 +41,22 @@ export default function Post({ post }) {
 
   if (router.isFallback) {
     return (
-      <Section bg="dark" />
+      <Section/>
     )
   }
 
   return (
-    <Section bg="dark">
-      <Flex direction="column" align="flex-start">
-        <Link href="/blog">
-          <Text>Go back</Text>
-        </Link>
-        <Heading fs="70px">{post.title}</Heading>
-        <Container dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Flex>
-    </Section>
+    <>
+      <Navbar blog />
+      <Section height="auto">
+        <Flex direction="column" align="flex-start">
+          <Link href="/blog">
+            <Text color="dark">Go back</Text>
+          </Link>
+          <Heading fs="64px" color="dark">{post.title}</Heading>
+          <Container dangerouslySetInnerHTML={{ __html: post.html }} />
+        </Flex>
+      </Section>
+    </>
   )
 }

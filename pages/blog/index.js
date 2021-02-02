@@ -15,12 +15,12 @@ export default function Blog({ posts }) {
   return (
     <>
       <Navbar blog/>
-      <Section bg="dark">
+      <Section>
         <Flex direction="column" align="flex-start">
-          <Heading>Welcome to my blog!</Heading>
+          <Heading color="dark">Welcome to my blog!</Heading>
           {posts.map(post =>
             <Link href={`/blog/${post.slug}`}>
-              <Text>{post.title}</Text>
+              <Text color="dark">{post.title}</Text>
             </Link>
           )}
         </Flex>

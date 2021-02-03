@@ -224,6 +224,7 @@ export const Image = styled.img`
   ${shape}
   ${position}
   ${control}
+  ${margin}
 `
 
 export function Background({ children }) {

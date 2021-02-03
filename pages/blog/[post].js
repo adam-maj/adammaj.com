@@ -7,10 +7,6 @@ const Container = styled.div`
   width: 800px;
   padding-bottom: 120px;
 
-  & > * {
-    /* font-family: 'Rubik', sans-serif; */
-  }
-
   & img {
     max-width: 800px;
     width: 800px;

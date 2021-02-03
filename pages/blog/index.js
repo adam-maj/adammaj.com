@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Section, Flex, Heading, Text, Image } from '../../styles/Styles'
 import Navbar from '../../components/Navbar'
-import Link from 'next/Link'
+import Link from 'next/link'
 import styled from 'styled-components'
 import moment from 'moment'
 

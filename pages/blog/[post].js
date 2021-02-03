@@ -2,7 +2,6 @@ import { Section, Text, Flex, Heading, Image } from '../../styles/Styles'
 import Navbar from '../../components/Navbar'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
-import Link from 'next/Link'
 
 const Container = styled.div`
   width: 800px;

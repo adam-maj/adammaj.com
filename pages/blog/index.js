@@ -3,6 +3,7 @@ import { Section, Flex, Heading, Text, Image } from '../../styles/Styles'
 import Navbar from '../../components/Navbar'
 import Link from 'next/Link'
 import styled from 'styled-components'
+import moment from 'moment'
 
 const Rule = styled.hr`
   margin-top: 40px;
@@ -39,6 +40,7 @@ function getWindowDimensions() {
 }
 
 export default function Blog({ posts }) {
+  console.log(posts[0])
   const [windowDimensions, setWindowDimensions] = useState({ width: 0, height: 0 })
 
   useEffect(() => {
@@ -71,8 +73,11 @@ export default function Blog({ posts }) {
           <Flex direction="column" align="flex-start" width={getWidth()} ml="20px" mr="20px">
             <Heading color="dark" fs="52px">Blog</Heading>
             <Text color="dark" fs="16px !important">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Mauris convallis sem varius odio fermentum, non consequat purus porta.”
+              I often write about a variety of topics I find interesting including
+              consciousness & awareness, productivity, time management, education and learning, 
+              skill development, personal growth, philosophy, psychology and much more.
+              <br /><br />
+              I'll put all of my writings here for other people to see as well.
             </Text>
             {windowDimensions.width < 768 && <Rule/>}
           </Flex>
@@ -123,8 +128,8 @@ function Post({ post }) {
         <Text fs="24px" fw="500" color="dark">{post.title}</Text>
         <Text color="dark">"{post.excerpt}... "</Text>
         <Flex justify="space-between" width="100%">
-          <Text color="gray.600">February 1, 2020</Text>
-          <Text color="gray.600">7 Minute Read</Text>
+          <Text color="gray.600">{moment(post.published_at).format("MMMM D, YYYY")}</Text>
+          <Text color="gray.600">{post.reading_time} Minute Read</Text>
         </Flex>
       </Container>
     </Link>

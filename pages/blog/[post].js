@@ -1,4 +1,4 @@
-import { Section, Text, Flex, Heading } from '../../styles/Styles'
+import { Section, Text, Flex, Heading, Image } from '../../styles/Styles'
 import Navbar from '../../components/Navbar'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
@@ -50,10 +50,8 @@ export default function Post({ post }) {
       <Navbar blog />
       <Section height="auto">
         <Flex direction="column" align="flex-start">
-          <Link href="/blog">
-            <Text color="dark">Go back</Text>
-          </Link>
           <Heading fs="64px" color="dark">{post.title}</Heading>
+          <Image src={post.feature_image} width="800px" mb="20px" />
           <Container dangerouslySetInnerHTML={{ __html: post.html }} />
         </Flex>
       </Section>

@@ -46,6 +46,8 @@ export default function Blog({ posts }) {
       setWindowDimensions(getWindowDimensions());
     }
 
+    handleResize()
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [])

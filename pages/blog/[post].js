@@ -44,8 +44,8 @@ export default function Post({ post }) {
     <>
       <Navbar blog />
       <Section height="auto">
-        <Flex direction="column" align="flex-start">
-          <Heading fs="64px" color="dark">{post.title}</Heading>
+        <Flex direction="column" align="flex-start" maxWidth="800px">
+          <Heading fs="48px" fw="500" color="dark">{post.title}</Heading>
           <Image src={post.feature_image} width="800px" mb="20px" />
           <Container dangerouslySetInnerHTML={{ __html: post.html }} />
         </Flex>

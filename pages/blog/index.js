@@ -27,7 +27,8 @@ export async function getStaticProps() {
   const { posts } = await res.json()
 
   return {
-    props: { posts }
+    props: { posts },
+    unstable_revalidate: 1
   }
 }
 

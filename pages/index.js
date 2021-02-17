@@ -73,7 +73,7 @@ export default function Home() {
 						</FadeInSection>
 					</Column>
 					<FadeInSection>
-						<Image src={'/SeniorPhoto.jpg'} width="100%" height="100%"></Image>
+						<Image src={'/senior-photo.jpg'} width="100%" height="100%"></Image>
 					</FadeInSection>
 				</Container>
 			</AboutSection>

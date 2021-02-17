@@ -1,5 +1,13 @@
 export const PROJECTS = [
   {
+    content_type: "Projects",
+    title: "InboxSquad Mobile Design",
+    date: "Jan 2021",
+    description: "I made a mockup for the mobile app of my startup InboxSquad. I considered the user experience with regard to the onboarding process and app usage. My goals was to create a sleek design with intuitive functionality.",
+    links: "View Mockup  /inbox-squad-mobile-design.png",
+    image: "/inbox-squad-mobile-design.png",
+    labels: ['Design', 'UI/UX']
+  }, {
     content_type: 'Projects',
     title: "InboxSquad",
     date: "Jan 2021",

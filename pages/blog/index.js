@@ -41,7 +41,6 @@ function getWindowDimensions() {
 }
 
 export default function Blog({ posts }) {
-  console.log(posts[0])
   const [windowDimensions, setWindowDimensions] = useState({ width: 0, height: 0 })
 
   useEffect(() => {
@@ -65,9 +64,19 @@ export default function Blog({ posts }) {
     }
   }
 
+  // Don't render component until dimensions load to prevent flash
+  if (!windowDimensions.width) {
+    return (
+      <>
+        <Navbar blog />
+        <Section height="100%" />
+      </>
+    )
+  }
+
   return (
     <>
-      <Navbar blog/>
+      <Navbar blog />
       <Section height="100%" padding="120px 40px">
         <Flex align="flex-start" maxWidth="1400px" direction={windowDimensions.width < 768 && "column"}>
 

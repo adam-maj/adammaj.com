@@ -69,7 +69,7 @@ export default function Blog({ posts }) {
     return (
       <>
         <Navbar blog />
-        <Section height="100vh" />
+        <Section minHeight="100vh" height="100%"/>
       </>
     )
   }
@@ -77,7 +77,7 @@ export default function Blog({ posts }) {
   return (
     <>
       <Navbar blog />
-      <Section height="100vh" padding="120px 40px">
+      <Section minHeight="100vh" height="100%" padding="120px 40px">
         <Flex align="flex-start" maxWidth="1400px" direction={windowDimensions.width < 768 && "column"}>
 
           <Flex direction="column" align="flex-start" width={getWidth()} ml="20px" mr="20px">

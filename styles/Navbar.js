@@ -5,11 +5,7 @@ export const Nav = styled.nav`
   padding-left: 30px;
   padding-right: 30px;
 
-  @media (max-width: 480px) {
-    display: none;
-  }
-
-  @media (min-width: 480px) {
+  @media (min-width: 720px) {
     padding-left: 150px;
     padding-right: 150px;
   }
@@ -28,6 +24,11 @@ export const Brand = styled.a`
   color: white !important;
   text-decoration: none !important;
   margin-bottom: 0px;
+
+  @media (max-width: 720px) {
+    display: none;
+    margin-right: 0px;
+  }
 `
 export const ListItem = styled.li`
   display: flex;

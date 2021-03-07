@@ -1,15 +1,24 @@
-import { Section, Text, Flex, Heading, Image } from '../../styles/Styles'
+import { Section, Flex, Heading, Image } from '../../styles/Styles'
 import Navbar from '../../components/Navbar'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
+const Box = styled(Section)`
+  height: auto;
+  justify-content: center;
+
+  @media (max-width: 720px) {
+    padding-top: 0px;
+  }
+`
+
 const Container = styled.div`
-  width: 600px;
+  width: min(90vw, 600px);
   padding-bottom: 120px;
 
   & img {
-    max-width: 600px;
-    width: 600px;
+    max-width: min(90vw, 600px);
+    width: min(90vw, 600px);
   }
 `
 
@@ -43,13 +52,13 @@ export default function Post({ post }) {
   return (
     <>
       <Navbar blog />
-      <Section height="auto" justify="flex-start">
+      <Box>
         <Flex direction="column" mt="40px">
-          <Heading fs="32px" width="600px" fw="600" color="dark">{post.title}</Heading>
-          <Image src={post.feature_image} width="600px" mb="20px" />
+          <Heading fs="32px" width="min(90vw, 600px)" fw="600" color="dark">{post.title}</Heading>
+          <Image src={post.feature_image} width="min(90vw, 600px)" mb="20px" />
           <Container dangerouslySetInnerHTML={{ __html: post.html }} />
         </Flex>
-      </Section>
+      </Box>
     </>
   )
 }

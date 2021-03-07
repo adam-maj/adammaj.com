@@ -147,6 +147,7 @@ export const Heading = styled.h1`
   ${text}
   ${color}
   ${position}
+  ${shape}
 `
 
 export const SubHeading = styled.h2`

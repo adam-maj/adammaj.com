@@ -4,12 +4,12 @@ import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  width: 800px;
+  width: 600px;
   padding-bottom: 120px;
 
   & img {
-    max-width: 800px;
-    width: 800px;
+    max-width: 600px;
+    width: 600px;
   }
 `
 
@@ -43,10 +43,10 @@ export default function Post({ post }) {
   return (
     <>
       <Navbar blog />
-      <Section height="auto">
-        <Flex direction="column" align="flex-start" maxWidth="800px">
-          <Heading fs="48px" fw="500" color="dark">{post.title}</Heading>
-          <Image src={post.feature_image} width="800px" mb="20px" />
+      <Section height="auto" justify="flex-start">
+        <Flex direction="column" mt="40px">
+          <Heading fs="32px" width="600px" fw="600" color="dark">{post.title}</Heading>
+          <Image src={post.feature_image} width="600px" mb="20px" />
           <Container dangerouslySetInnerHTML={{ __html: post.html }} />
         </Flex>
       </Section>

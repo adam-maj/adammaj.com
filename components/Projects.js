@@ -1,6 +1,14 @@
 export const PROJECTS = [
   {
     content_type: "Projects",
+    title: "Von Token",
+    date: "Mar 2021",
+    description: "I made my own ERC-20 compliant cryptocurrency with Solidity and built a DApp around it to faciliate an ICO.",
+    links: "View Website  https://vontoken.vercel.app",
+    image: "https://vontoken.vercel.app/DApp.jpg",
+    labels: ['Blockchain', 'Ethereum', 'Solidity', 'Web3', 'Truffle', 'Ganache', 'MetaMask']
+  }, {
+    content_type: "Projects",
     title: "InboxSquad Mobile Design",
     date: "Jan 2021",
     description: "I made a mockup for the mobile app of my startup InboxSquad. I considered the user experience with regard to the onboarding process and app usage. My goals was to create a sleek design with intuitive functionality.",

@@ -5,6 +5,27 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import moment from 'moment'
 
+const Container = styled(Section)`
+  min-height: 100vh;
+  height: 100%;
+  padding: 120px 40px;
+
+  @media (max-width: 720px) {
+    padding: 120px 0px;
+  }
+`
+
+const FlexContainer = styled(Flex)`
+  align-items: flex-start;
+  max-width: 1400px;
+  direction: ${props => props.direction};
+  
+  @media (max-width: 720px) {
+    align-items: center;
+    width: 100%;
+  }
+`
+
 const Rule = styled.hr`
   margin-top: 40px;
   margin-bottom: 40px;
@@ -12,7 +33,7 @@ const Rule = styled.hr`
   width: 100%;
 `
 
-const Container = styled(Flex)`
+const Box = styled(Flex)`
   align-items: flex-start;
   flex-direction: column;
   cursor: pointer;
@@ -56,7 +77,7 @@ export default function Blog({ posts }) {
 
   function getWidth() {
     if (windowDimensions.width < 768) {
-      return "calc(100vw - 120px)"
+      return "calc(100vw - 80px)"
     } else if (windowDimensions.width < 1400) {
       return "35%"
     } else {
@@ -77,8 +98,8 @@ export default function Blog({ posts }) {
   return (
     <>
       <Navbar blog />
-      <Section minHeight="100vh" height="100%" padding="120px 40px">
-        <Flex align="flex-start" maxWidth="1400px" direction={windowDimensions.width < 768 && "column"}>
+      <Container>
+        <FlexContainer direction={windowDimensions.width < 768 && "column"}>
 
           <Flex direction="column" align="flex-start" width={getWidth()} ml="20px" mr="20px">
             <Heading color="dark" fs="52px">Blog</Heading>
@@ -113,7 +134,7 @@ export default function Blog({ posts }) {
               </Flex>
             </>
           ) : (
-            <Flex direction="column" width={windowDimensions.width > 768 ? "50%" : "calc(100vw - 120px)"} ml="20px" mr="20px">
+            <Flex direction="column" width={windowDimensions.width > 768 ? "50%" : "calc(100vw - 80px)"} ml="20px" mr="20px">
               {posts.map(post =>
                 <>
                   <Post post={post} />
@@ -124,8 +145,8 @@ export default function Blog({ posts }) {
           )}
 
 
-        </Flex>
-      </Section>
+        </FlexContainer>
+      </Container>
     </>
   )
 }
@@ -133,7 +154,7 @@ export default function Blog({ posts }) {
 function Post({ post }) {
   return (
     <Link href={`/blog/${post.slug}`}>
-      <Container>
+      <Box>
         <Image mb="16px" src={post.feature_image} width="100%"/>
         <Text fs="24px" fw="500" color="dark">{post.title}</Text>
         <Text color="dark">"{post.excerpt}... "</Text>
@@ -141,7 +162,7 @@ function Post({ post }) {
           <Text color="gray.600">{moment(post.published_at).format("MMMM D, YYYY")}</Text>
           <Text color="gray.600">{post.reading_time} Minute Read</Text>
         </Flex>
-      </Container>
+      </Box>
     </Link>
   )
 }

@@ -8,7 +8,7 @@ const Box = styled(Section)`
   justify-content: center;
 
   @media (max-width: 720px) {
-    padding-top: 0px;
+    padding-top: 50px;
   }
 `
 

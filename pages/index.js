@@ -40,7 +40,7 @@ export default function Home() {
 			<Navbar />
 			<HeroSection id="home">
 				<FadeInSection>
-					<Header id="home">Hi, I'm <Name>Adam Majmudar</Name>, Startup Founder, Neuroscience Enthusiast, Machine Learning Engineer, & Full Stack Developer.</Header>
+					<Header id="home">Hi, I'm <Name>Adam Majmudar</Name>, Skill Explorer, Product Builder, and Machine Learning Engineer & Full Stack Developer.</Header>
 				</FadeInSection>
 				<FadeInSection>
 					<Socials id={0}/>
@@ -55,7 +55,7 @@ export default function Home() {
 						</FadeInSection>
 						<FadeInSection>
 							<Text>
-								I’m a 17-year-old focused on building products that solve problems, working on startup ideas, and developing new skills (currently learning about SEO, sales, and marketing).
+								I’m a 18-year-old focused on building products that solve problems, working on startup ideas, and developing new skills (currently learning about Design & UI/UX, Blockchain, and Marketing/Growth).
 								<br/><br/>
 								Currently, I work as the product manager at <a style={{ color: 'white', fontWeight: 700 }} href="https://ascendbuild.co" target="_blank">Ascend</a>.
 								I also work as a machine learning developer and software engineer at <a style={{color: 'white', fontWeight: 700}} href="https://dovetale.com/" target="_blank">Dovetale</a>
@@ -64,10 +64,11 @@ export default function Home() {
 								<br/><br/>
 								<Text style={{fontWeight: 700}}>I'm most interested in:</Text>
 								<ul>
-									<Interest>Neuroscience, BCIs, & Neuralink</Interest>
-									<Interest>Philosophy & Psychology (Existentialism, Stoicism, Vedanta, etc.)</Interest>
-									<Interest>Artificial Intelligence (Especially in relation to neuroscience/BCIs or AGI - which I’m skeptical of)</Interest>
-									<Interest>Quantum Computing (I think the theory is interesting regardless of how practical the field will become)</Interest>
+								  <Interest>Philosophy & Psychology (Existentialism, Stoicism, Vedanta, etc.)</Interest>
+									<Interest>Mindfulness, Consciousness, & Introspection</Interest>
+									<Interest>Artificial Intelligence (especially in relation to neuroscience)</Interest>
+									<Interest>Quantum Computing (and its future implications)</Interest>
+									<Interest>Meta Learning & Skill Development</Interest>
 								</ul>
 							</Text>
 						</FadeInSection>

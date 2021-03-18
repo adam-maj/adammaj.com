@@ -40,7 +40,7 @@ export default function Home() {
 			<Navbar />
 			<HeroSection id="home">
 				<FadeInSection>
-					<Header id="home">Hi, I'm <Name>Adam Majmudar</Name>, Skill Explorer, Product Builder, and Machine Learning Engineer & Full Stack Developer.</Header>
+					<Header id="home">Hi, I'm <Name>Adam Majmudar</Name>, Skill Explorer, Builder, Machine Learning Engineer & Full Stack Developer.</Header>
 				</FadeInSection>
 				<FadeInSection>
 					<Socials id={0}/>

@@ -68,7 +68,7 @@ function About() {
 					</FadeInSection>
 					<FadeInSection>
 						<Text>
-							I'm a learner and builder a heart with a wide variety of interests. I'm a constant truth-seeker 
+							I'm a learner and builder at heart with a wide variety of interests. I'm a constant truth-seeker 
 							and love exploring and learning about philosophy. I also like to take time to prioritize diving deep 
 							into my specific interests.
 							<br/><br/>

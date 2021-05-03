@@ -132,12 +132,6 @@ function Portfolio() {
 							>
 								Articles
 							</Filter>
-							<Filter 
-								active={filter === 'Newsletters'} 
-								onClick={() => setFilter('Newsletters')}
-							>
-								Newsletters
-							</Filter>
 						</FlexRow>
 					</FadeInSection>
 					<FadeInSection>

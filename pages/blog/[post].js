@@ -1,6 +1,7 @@
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import { Section, Flex, Heading, Image } from '../../styles/Styles'
 import Navbar from '../../components/Navbar'
-import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
 const Box = styled(Section)`
@@ -10,6 +11,11 @@ const Box = styled(Section)`
   @media (max-width: 720px) {
     padding-top: 50px;
   }
+`
+
+const Comments = styled.div`
+  width: min(90vw, 600px);
+  margin-bottom: 100px;
 `
 
 const Container = styled.div`
@@ -44,6 +50,23 @@ export function getStaticPaths() {
 export default function Post({ post }) {
   const router = useRouter()
 
+  useEffect(() => {
+    loadComments()
+  }, [])
+
+  function loadComments() {
+    window.disqus_config = () => {
+      this.page.url = window.location.href
+      this.page.identifier = post.slug
+    }
+
+    const script = document.createElement('script')
+		script.src = 'https://adammaj.disqus.com/embed.js'
+		script.setAttribute('data-timestamp', Date.now().toString())
+
+		document.body.appendChild(script)
+  }
+
   if (router.isFallback) {
     return (
       <Section/>
@@ -58,6 +81,7 @@ export default function Post({ post }) {
           <Heading fs="32px" width="min(90vw, 600px)" fw="600" color="dark">{post.title}</Heading>
           <Image src={post.feature_image} width="min(90vw, 600px)" mb="20px" />
           <Container dangerouslySetInnerHTML={{ __html: post.html }} />
+          <Comments id="disqus_thread" />
         </Flex>
       </Box>
     </>

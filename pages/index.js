@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import FadeInSection from '../components/FadeInSection'
 import { PROJECTS } from '../components/Projects'
 import { Brand } from '../styles/Navbar'
+import Subscribe from '../components/Subscribe'
 import {
 	HeroSection,
 	AboutSection,
@@ -43,10 +44,19 @@ export default function Home() {
 			<Navbar />
 			<HeroSection id="home">
 				<FadeInSection>
-					<Header id="home">Hi, I'm <Name>Adam Majmudar</Name>, Curious Learner, Problem Solver, Blockchain & ML Engineer, and Full Stack Developer.</Header>
+					<Header id="home">
+						Hi, I'm <Name>Adam Majmudar</Name>, Curious Learner, Problem Solver, Blockchain & ML Engineer, and Full Stack Developer.
+					</Header>
 				</FadeInSection>
 				<FadeInSection>
 					<Socials id={0}/>
+					<Subscribe 
+						width="min(600px, 60vw)" 
+						color="white" 
+						mt="80px"
+					>
+						Want to stay up to date with what I'm working on? Drop your email below!
+					</Subscribe>
 				</FadeInSection>
 			</HeroSection>
 

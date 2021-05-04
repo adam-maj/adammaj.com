@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { Section, Flex, Heading, Image } from '../../styles/Styles'
+import Subscribe from '../../components/Subscribe'
 import Navbar from '../../components/Navbar'
 import styled from 'styled-components'
 
@@ -20,7 +21,6 @@ const Comments = styled.div`
 
 const Container = styled.div`
   width: min(90vw, 600px);
-  padding-bottom: 120px;
 
   & img {
     max-width: min(90vw, 600px);
@@ -81,6 +81,10 @@ export default function Post({ post }) {
           <Heading fs="32px" width="min(90vw, 600px)" fw="600" color="dark">{post.title}</Heading>
           <Image src={post.feature_image} width="min(90vw, 600px)" mb="20px" />
           <Container dangerouslySetInnerHTML={{ __html: post.html }} />
+          <Subscribe width="min(90vw, 600px)" light mt="80px" mb="120px">
+            If you enjoyed this post, please consider entering your email 
+            below to get updates when I post and stay up to date on what I'm working on!
+          </Subscribe>
           <Comments id="disqus_thread" />
         </Flex>
       </Box>

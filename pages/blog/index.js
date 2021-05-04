@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar'
 import Link from 'next/link'
 import styled from 'styled-components'
 import moment from 'moment'
+import axios from 'axios'
 
 const Container = styled(Section)`
   min-height: 100vh;
@@ -63,13 +64,13 @@ function getWindowDimensions() {
 
 export default function Blog({ posts }) {
   const [windowDimensions, setWindowDimensions] = useState({ width: 0, height: 0 })
+  const [email, setEmail] = useState('')
 
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
 
-    fetch('/api/subscribe');
     handleResize()
 
     window.addEventListener('resize', handleResize);
@@ -83,6 +84,20 @@ export default function Blog({ posts }) {
       return "35%"
     } else {
       return "520px"
+    }
+  }
+
+  function isEmailValid() {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email) || !email;
+  }
+
+  async function subscribe() {
+    if (isEmailValid()) {
+      axios.post('/api/subscribe/', {
+        email
+      })
+      setEmail('')
     }
   }
 
@@ -126,11 +141,14 @@ export default function Blog({ posts }) {
                 br="4px 0px 0px 4px"
                 placeholder={windowDimensions.width < 928 && windowDimensions.width > 768 ? "Your email" : "example@gmail.com"}
                 margin="0px !important"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
               />
               <Button 
                 br="0px 4px 4px 0px"
                 color="#111"
                 primary
+                onClick={subscribe}
               >
                 Submit
               </Button>

@@ -45,7 +45,7 @@ export default function Home() {
 			<HeroSection id="home">
 				<FadeInSection>
 					<Header id="home">
-						Hi, I'm <Name>Adam Majmudar</Name>, Curious Learner, Problem Solver, Blockchain & ML Engineer, and Full Stack Developer.
+						Hi, I'm <Name>Adam Majmudar</Name>. Curious Learner, Problem Solver, Blockchain & ML Engineer, and Full Stack Developer.
 					</Header>
 				</FadeInSection>
 				<FadeInSection>

@@ -15,8 +15,8 @@ export default function Subscribe ({ children, light, ...props }) {
       const res = await axios.post('/api/subscribe/', {
         email
       })
-      if (res.data) {
-        console.log(res.data)
+      if (!res.data) {
+        setEmail('')
       }
     }
   }

@@ -12,10 +12,12 @@ export default function Subscribe ({ children, light, ...props }) {
 
   async function subscribe() {
     if (isEmailValid()) {
-      axios.post('/api/subscribe/', {
+      const res = await axios.post('/api/subscribe/', {
         email
       })
-      setEmail('')
+      if (res.data) {
+        console.log(res.data)
+      }
     }
   }
 

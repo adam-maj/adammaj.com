@@ -1,4 +1,4 @@
-const axios = require('axios')
+import axios from 'axios'
 
 export default async (req, res) => {
   if (req.method == 'POST') {
@@ -6,7 +6,7 @@ export default async (req, res) => {
       baseURL: 'https://api.mailerlite.com/api/v2/',
       headers: {
         'Content-type': 'application/json',
-        'X-MailerLite-ApiKey': '280eaae758a7e28f1bf484a3891ce188'
+        'X-MailerLite-ApiKey': process.env.MAILERLITE_KEY
       }
     })
   
@@ -20,10 +20,14 @@ export default async (req, res) => {
   
     res.end();
   
-    await client.post('subscribers', {
-      email: req.body.email
-    })
-    res.end()
+    try {
+      await client.post('subscribers', {
+        email: req.body.email
+      })
+      res.end()
+    } catch (err) {
+      res.send(err)
+    }
   } else {
     res.status(404).end()
   }

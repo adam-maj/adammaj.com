@@ -82,8 +82,8 @@ export default function Post({ post }) {
           <Image src={post.feature_image} width="min(90vw, 600px)" mb="20px" />
           <Container dangerouslySetInnerHTML={{ __html: post.html }} />
           <Subscribe width="min(90vw, 600px)" light mt="80px" mb="120px">
-            If you enjoyed this post, please consider entering your email 
-            below to get updates when I post and stay up to date on what I'm working on!
+            If you enjoyed this post and want stay up to date with what I'm writing and working on,
+            be sure to drop your email below!
           </Subscribe>
           <Comments id="disqus_thread" />
         </Flex>

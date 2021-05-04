@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Section, Flex, Heading, Text, Image } from '../../styles/Styles'
+import { Section, Flex, Heading, Text, Image, Input, Button, Span } from '../../styles/Styles'
 import Navbar from '../../components/Navbar'
 import Link from 'next/link'
 import styled from 'styled-components'
@@ -69,6 +69,7 @@ export default function Blog({ posts }) {
       setWindowDimensions(getWindowDimensions());
     }
 
+    fetch('/api/subscribe');
     handleResize()
 
     window.addEventListener('resize', handleResize);
@@ -104,12 +105,37 @@ export default function Blog({ posts }) {
           <Flex direction="column" align="flex-start" width={getWidth()} ml="20px" mr="20px">
             <Heading color="dark" fs="52px">Blog</Heading>
             <Text color="dark" fs="16px !important">
-              I often write about a variety of topics I find interesting including
-              consciousness & awareness, productivity, time management, education and learning, 
-              skill development, personal growth, philosophy, psychology and much more.
-              <br /><br />
-              I'll put all of my writings here for other people to see as well.
+              I often write about a variety of topics I find interesting including:
+              <ul>
+                <li>Consciousness and neuroscience</li>
+                <li>Philosophy and psychology</li>
+                <li>Productivity, skill development, and personal growth</li>
+                <li>Education & learning</li>
+                <li>and much much more...</li>
+              </ul>
+
+              <br />
+
+              <Span fw="bold">
+                If you enjoy reading my posts, 
+                please consider entering your email below to get updates when I post!
+              </Span>
             </Text>
+            <Flex>
+              <Input 
+                br="4px 0px 0px 4px"
+                placeholder={windowDimensions.width < 928 && windowDimensions.width > 768 ? "Your email" : "example@gmail.com"}
+                margin="0px !important"
+              />
+              <Button 
+                br="0px 4px 4px 0px"
+                color="#111"
+                primary
+              >
+                Submit
+              </Button>
+            </Flex>
+
             {windowDimensions.width < 768 && <Rule/>}
           </Flex>
 

@@ -18,8 +18,6 @@ export default async (req, res) => {
       return;
     }
   
-    res.end();
-  
     try {
       await client.post('subscribers', {
         email: req.body.email

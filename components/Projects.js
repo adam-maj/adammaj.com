@@ -81,6 +81,14 @@ export const PROJECTS = [
     labels: ['Deep Learning', 'TensorFlow', 'Numpy', 'Pandas']
   }, {
     content_type: 'Articles',
+    title: 'DMT & The Brain: Building Alien Worlds',
+    data: 'May 2021',
+    description: 'Learn about the proposed neurobiological mechanisms of action of the powerful psychedelic DMT and and interesting theory about the nature of its effect.',
+    links: 'View Article  https://adam-maj.medium.com/dmt-the-brain-building-alien-worlds-8be4be5efe85',
+    image: 'https://miro.medium.com/max/1400/0*Ah9RakYvHZXkpQ_G.jpg',
+    labels: ['Neuroscience', 'Psychedelics']
+  }, {
+    content_type: 'Articles',
     title: 'The Ultimate Guide to Learning About Artificial Intelligence',
     date: 'Apr 2020',
     description: 'I created a comprehensive guide with everything you need to know about artificial intelligence from introductory theory, to learning to code, to implementing artificial intelligence algorithms, and much more!',

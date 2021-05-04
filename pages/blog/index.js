@@ -126,7 +126,6 @@ export default function Blog({ posts }) {
                 <li>Philosophy and psychology</li>
                 <li>Productivity, skill development, and personal growth</li>
                 <li>Education & learning</li>
-                <li>and much much more...</li>
               </ul>
 
               <br />

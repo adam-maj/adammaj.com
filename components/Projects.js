@@ -83,7 +83,7 @@ export const PROJECTS = [
     content_type: 'Articles',
     title: 'DMT & The Brain: Building Alien Worlds',
     data: 'May 2021',
-    description: 'Learn about the proposed neurobiological mechanisms of action of the powerful psychedelic DMT and and interesting theory about the nature of its effect.',
+    description: 'Learn about the proposed neurobiological mechanisms of action of the powerful psychedelic DMT and an interesting theory about the nature of its effect.',
     links: 'View Article  https://adam-maj.medium.com/dmt-the-brain-building-alien-worlds-8be4be5efe85',
     image: 'https://miro.medium.com/max/1400/0*Ah9RakYvHZXkpQ_G.jpg',
     labels: ['Neuroscience', 'Psychedelics']

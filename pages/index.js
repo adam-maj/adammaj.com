@@ -51,7 +51,7 @@ export default function Home() {
 				<FadeInSection>
 					<Socials id={0}/>
 					<Subscribe 
-						width="min(600px, 60vw)" 
+						width="min(600px, 70vw)" 
 						color="white" 
 						mt="80px"
 					>

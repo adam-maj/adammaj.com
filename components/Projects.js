@@ -81,8 +81,16 @@ export const PROJECTS = [
     labels: ['Deep Learning', 'TensorFlow', 'Numpy', 'Pandas']
   }, {
     content_type: 'Articles',
+    title: 'The Complete Guide to Making Money With Liquity (LQTY)',
+    date: 'May 2021',
+    description: 'Learn about the upside potential and risks of the DeFi lending protocol Liquity and how you can get involved today',
+    links: 'View Article  https://adam-maj.medium.com/the-complete-guide-to-making-money-with-liquity-lqty-39b355fba2bc',
+    image: 'https://ph-files.imgix.net/f9dcd60b-6c35-4f63-805f-a2a4b19ce0ad.png?auto=format&auto=compress&codec=mozjpeg&cs=strip',
+    labels: ['Blockchain', 'DeFi']
+  }, {
+    content_type: 'Articles',
     title: 'DMT & The Brain: Building Alien Worlds',
-    data: 'May 2021',
+    date: 'May 2021',
     description: 'Learn about the proposed neurobiological mechanisms of action of the powerful psychedelic DMT and an interesting theory about the nature of its effect.',
     links: 'View Article  https://adam-maj.medium.com/dmt-the-brain-building-alien-worlds-8be4be5efe85',
     image: 'https://miro.medium.com/max/1400/0*Ah9RakYvHZXkpQ_G.jpg',

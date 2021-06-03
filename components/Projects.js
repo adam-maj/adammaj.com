@@ -80,6 +80,14 @@ export const PROJECTS = [
     image: 'https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/bank_2_660x450_240120042323_260620110758.jpg',
     labels: ['Deep Learning', 'TensorFlow', 'Numpy', 'Pandas']
   }, {
+    content_type: "Articles",
+    title: "A Framework For Efficiently Building Technical Competence In Any Field",
+    date: "June 2021",
+    description: "Learn how to efficiently build technical competence in the discipline of your choice.",
+    links: "View Article  https://adam-maj.medium.com/a-proven-framework-for-efficiently-building-technical-competence-in-any-field-c3131c27d89f",
+    image: "https://miro.medium.com/max/2400/0*kvVPpa4iFpxqg8T2.jpg",
+    labels: ['Self Improvement', 'Learning']
+  }, {
     content_type: 'Articles',
     title: 'The Complete Guide to Making Money With Liquity (LQTY)',
     date: 'May 2021',
@@ -118,7 +126,7 @@ export const PROJECTS = [
     description: 'Learn how to pick up skills as efficiently as possible, build on current interests, and explore completely new fields.',
     links: 'View Article  https://adam-maj.medium.com/meta-learning-the-secret-to-rapid-learning-and-growth-in-the-age-of-technology-eea8693ae3a3?sk=0d8970237f91ef3a0c19fa16d2afe689',
     image: 'https://miro.medium.com/max/2000/0*hj7KHa2eVZbbPCfJ',
-    labels: ['Self Improvement']
+    labels: ['Self Improvement', 'Learning']
   }, {
     content_type: 'Articles',
     title: 'The Enemy of Progress: What is Complacency and How Can We Avoid It?',

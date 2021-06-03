@@ -116,7 +116,7 @@ export const PROJECTS = [
     title: 'Meta Learning: The Secret to Rapid Learning and Personal Growth in the Age of Technology',
     date: 'May 2020',
     description: 'Learn how to pick up skills as efficiently as possible, build on current interests, and explore completely new fields.',
-    links: 'View Article  https://medium.com/@mr.adam.maj/increasing-internal-motivation-and-getting-back-in-control-of-yourself-ff171a2bbb87?source=friends_link&sk=7fb9054152a6ef8f0b6566ffdb6beabc',
+    links: 'View Article  https://adam-maj.medium.com/meta-learning-the-secret-to-rapid-learning-and-growth-in-the-age-of-technology-eea8693ae3a3?sk=0d8970237f91ef3a0c19fa16d2afe689',
     image: 'https://miro.medium.com/max/2000/0*hj7KHa2eVZbbPCfJ',
     labels: ['Self Improvement']
   }, {

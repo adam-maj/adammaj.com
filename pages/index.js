@@ -45,7 +45,7 @@ export default function Home() {
 			<HeroSection id="home">
 				<FadeInSection>
 					<Header id="home">
-						Hi, I'm <Name>Adam Majmudar</Name>. Curious Learner, Problem Solver, Blockchain & ML Engineer, and Full Stack Developer.
+						Hi, I'm <Name>Adam Majmudar</Name> - Web3 & ML Product Engineer, Neuro & Psychedelics Enthusiast, and Curious Learner & Builder.
 					</Header>
 				</FadeInSection>
 				<FadeInSection>
@@ -78,24 +78,26 @@ function About() {
 					</FadeInSection>
 					<FadeInSection>
 						<Text>
-							I'm an 18 year old learner and builder at heart with a wide variety of interests. I'm a constant truth-seeker 
-							and love exploring and learning about philosophy. I also like to take time to prioritize diving deep 
-							into my specific interests.
+							I'm an 18-year-old learner and builder at heart with a wide variety of interests. 
+							I'm a constant truth-seeker and love exploring and learning about philosophy and epistemology.
+							I also like to take time to prioritize diving deep into specific interests and building technical competence
+							in a variety of fields.
 							<br/><br/>
-							Currently, I'm working on building an ML platform for a Canadian company doing cutting edge research on 
-							anxiety and sleep disorders, I'm designing and building an NFT marketplace for creators in <AboutLink href="https://f.inc">Founders Inc.</AboutLink>, and 
-							I'm the product manager at <AboutLink href="https://ascendbuild.co">Ascend</AboutLink>. 
+							Recently, I cofounded <AboutLink href="https://thirdweb.com" target="_blank">Thirdweb</AboutLink>&nbsp;
+							(incubated in <AboutLink href="https://f.inc" target="_blank">Founders Inc.</AboutLink>), which
+							makes it easy to add popular web3 features to projects like NFTs, marketplaces, and currencies. Currently,
+							I'm focused on building Thirdweb and turning it into the Stripe for web3. 
 							I'm also a freshman studying CS and Cognitive Science at the University of Pennsylvania.
-							<br/><br/>
+							<br /><br />
 							<Text style={{fontWeight: 700}}>
 								I'm most interested in:
 							</Text>
 							<ul>
 								<Interest>
-									Philosophy & Psychology (Existentialism, Vedanta, etc.)
+									Psychedelics, Neuroscience, Consciousness, Meditation
 								</Interest>
 								<Interest>
-									Neuroscience, Consciousness, Meditation, & Psychedelics
+									Philosophy, Psychology, & Epistemology (Existentialism, Vedanta, Nondualism, etc.)
 								</Interest>
 								<Interest>
 									Artificial Intelligence, Quantum Computing, and Blockchain (and their potential future implications)

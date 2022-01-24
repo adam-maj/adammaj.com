@@ -78,16 +78,15 @@ function About() {
 					</FadeInSection>
 					<FadeInSection>
 						<Text>
-							I'm an 18-year-old learner and builder at heart with a wide variety of interests. 
+							I'm an 19-year-old learner and builder at heart with a wide variety of interests. 
 							I'm a constant truth-seeker and love exploring and learning about philosophy and epistemology.
 							I also like to take time to prioritize diving deep into specific interests and building technical competence
 							in a variety of fields.
 							<br/><br/>
-							Recently, I cofounded <AboutLink href="https://thirdweb.com" target="_blank">Thirdweb</AboutLink>&nbsp;
+							I'm a founding team member of <AboutLink href="https://twitter.com/thirdweb_" target="_blank">Thirdweb</AboutLink>&nbsp;
 							(incubated in <AboutLink href="https://f.inc" target="_blank">Founders Inc.</AboutLink>), which
-							makes it easy to add popular web3 features to projects like NFTs, marketplaces, and currencies. Currently,
-							I'm focused on building Thirdweb and turning it into the Stripe for web3. 
-							I'm also a freshman studying CS and Cognitive Science at the University of Pennsylvania.
+							makes it easy to build products with web3 technologies. Currently, I'm focused on building Thirdweb and turning it into the Stripe for web3. 
+							I'm also a sophomore studying CS, Cognitive Science, and Neuroscience at the University of Pennsylvania.
 							<br /><br />
 							<Text style={{fontWeight: 700}}>
 								I'm most interested in:

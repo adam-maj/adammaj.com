@@ -1,10 +1,7 @@
 import { FlexRow } from '../styles/Landing'
-import Calendly from './icons/Calendly'
-import Github from './icons/Github'
-import Gmail from './icons/Gmail'
-import Linkedin from './icons/Linkedin'
-import Twitter from './icons/Twitter'
-import Youtube from './icons/Youtube'
+import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { SiGmail } from 'react-icons/si'
+import { BsCalendarWeekFill } from 'react-icons/bs'
 import styled from 'styled-components'
 
 const Social = styled.li`
@@ -32,32 +29,22 @@ export default function Socials({ id }) {
     <FlexRow>
       <Social>
         <a href="https://twitter.com/MajmudarAdam" target="_blank">
-          <Twitter id={id} />
+          <FaTwitter color="white" size={32} />
         </a>
       </Social>
       <Social>
         <a href="https://github.com/adam-maj" target="_blank">
-          <Github id={id + 1} />
+          <FaGithub color="white" size={32} />
         </a>
       </Social>
       <Social>
         <a href="https://www.linkedin.com/in/adam-majmudar-24b596194/" target="_blank">
-          <Linkedin id={id + 2} />
+          <FaLinkedin color="white" size={32} />
         </a>
       </Social>
       <Social>
         <a href="mailto: adam.majmudar@gmail.com" target="_blank">
-          <Gmail id={id + 3} />
-        </a>
-      </Social>
-      <Social>
-        <a href="https://calendly.com/adam-maj" target="_blank">
-          <Calendly id={id + 4} />
-        </a>
-      </Social>
-      <Social style={{ marginRight: 0 }}>
-        <a href="https://www.youtube.com/channel/UChRuoAb-aIi-N4LWsRKOYLg" target="_blank">
-          <Youtube id={id + 5} />
+          <SiGmail color="white" size={30} />
         </a>
       </Social>
     </FlexRow>

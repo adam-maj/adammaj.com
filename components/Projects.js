@@ -1,6 +1,24 @@
 export const PROJECTS = [
   {
     content_type: "Projects",
+    title: "NiftySwap",
+    date: "Feb 2022",
+    description: "NiftySwap lets you bundle, barter, and trade your NFTs and tokens with ease. I built this product with a team for thirdweb hack week.",
+    links: "View App  https://niftyswap.market/",
+    image: "https://niftyswap.market/niftyswap-thumbnail.png",
+    labels: ['Web3', 'NextJS', 'Thirdweb', 'Alchemy API']
+  },
+  {
+    content_type: "Projects",
+    title: "Thirdweb",
+    date: "Sep 2021",
+    description: "Thirdweb lets you easily build web3 apps.",
+    links: "View Product  https://thirdweb.com   View Twitter  https://twitter.com/thirdweb_",
+    image: "https://thirdweb.com/thirdweb-og.png",
+    labels: ['Web3', 'NextJS', 'Thirdweb', 'IPFS']
+  },
+  {
+    content_type: "Projects",
     title: "Von Token",
     date: "Mar 2021",
     description: "I made my own ERC-20 compliant cryptocurrency with Solidity and built a DApp around it to faciliate an ICO.",

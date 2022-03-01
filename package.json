@@ -8,13 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.8.6",
     "axios": "^0.21.1",
     "moment": "^2.29.1",
     "next": "10.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-icons": "^4.3.1",
     "react-scrollspy": "^3.4.3",
     "styled-components": "^5.2.1"
-  },
-  "devDependencies": {}
+  }
 }

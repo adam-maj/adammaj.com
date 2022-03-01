@@ -164,7 +164,7 @@ export const HeaderLine = styled.hr`
 `
 export const Name = styled.span`
   color: #0072B1;
-  background: -webkit-linear-gradient(45deg, #F1A933, #6C0B05);
+  background: -webkit-linear-gradient(45deg, #DFA579, #C79081);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

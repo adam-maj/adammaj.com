@@ -45,18 +45,18 @@ export default function Home() {
 			<HeroSection id="home">
 				<FadeInSection>
 					<Header id="home">
-						Hi, I'm <Name>Adam Majmudar</Name> - Web3 & ML Product Engineer, Neuro & Psychedelics Enthusiast, and Curious Learner & Builder.
+						Hi, I'm <Name>Adam Majmudar</Name> - I love building products, writing, and philosophy.
 					</Header>
 				</FadeInSection>
 				<FadeInSection>
 					<Socials id={0}/>
-					<Subscribe 
+					{/* <Subscribe 
 						width="min(600px, 70vw)" 
 						color="white" 
 						mt="80px"
 					>
 						Want to stay up to date with what I'm working on? Drop your email below!
-					</Subscribe>
+					</Subscribe> */}
 				</FadeInSection>
 			</HeroSection>
 
@@ -78,14 +78,12 @@ function About() {
 					</FadeInSection>
 					<FadeInSection>
 						<Text>
-							I'm an 19-year-old learner and builder at heart with a wide variety of interests. 
+							I'm an 19-year-old learner and builder with a wide variety of interests. 
 							I'm a constant truth-seeker and love exploring and learning about philosophy and epistemology.
 							I also like to take time to prioritize diving deep into specific interests and building technical competence
 							in a variety of fields.
 							<br/><br/>
-							I'm a founding team member of <AboutLink href="https://twitter.com/thirdweb_" target="_blank">Thirdweb</AboutLink>&nbsp;
-							(incubated in <AboutLink href="https://f.inc" target="_blank">Founders Inc.</AboutLink>), which
-							makes it easy to build products with web3 technologies. Currently, I'm focused on building Thirdweb and turning it into the Stripe for web3. 
+							I'm a founding engineer/part of the founding team of <AboutLink href="https://twitter.com/thirdweb_" target="_blank">Thirdweb</AboutLink>.&nbsp; 
 							I'm also a sophomore studying CS, Cognitive Science, and Neuroscience at the University of Pennsylvania.
 							<br /><br />
 							<Text style={{fontWeight: 700}}>

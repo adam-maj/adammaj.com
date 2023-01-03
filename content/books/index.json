@@ -1,1 +1,98 @@
-[]
+[
+  {
+    "title": "The Last Question",
+    "coverUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1375886757l/18299452.jpg",
+    "spineColor": "#000",
+    "textColor": "#fff"
+  },
+  {
+    "title": "Zero to One",
+    "coverUrl": "https://img.wook.pt/images/zero-to-one-blake-masters/MXwyMjE1NzUyM3wxODAzNjM1OXwxNTcxMDIyMTAyMDAw/500x",
+    "spineColor": "#5e7fa6",
+    "textColor": "#fff"
+  },
+  {
+    "title": "Flowers for Algernon",
+    "coverUrl": "http://prodimage.images-bn.com/pimages/9780156030304_p0_v4_s1200x630.jpg",
+    "spineColor": "#e02f2f",
+    "textColor": "#fff"
+  },
+  {
+    "title": "The Power of Now",
+    "coverUrl": "https://kbimages1-a.akamaihd.net/59e80730-aaad-4b30-ac1d-fd5952880c01/1200/1200/False/the-power-of-now-1.jpg",
+    "spineColor": "#f0eda8",
+    "textColor": "#222"
+  },
+  {
+    "title": "Life 3.0",
+    "coverUrl": "https://m.media-amazon.com/images/I/41oUl8JqogL.jpg",
+    "spineColor": "#180b26",
+    "textColor": "#fff"
+  },
+  {
+    "title": "Atomic Habits",
+    "coverUrl": "https://img.wook.pt/images/atomic-habits-james-clear/MXwyMTg2NTQxOHwxNzcyMDUzMXwxNjQ3MzQwMzcwMDAw/500x",
+    "spineColor": "#fffff0",
+    "textColor": "#222"
+  },
+  {
+    "title": "The Almanack of Naval",
+    "coverUrl": "https://kbimages1-a.akamaihd.net/4201b1dd-87a3-449e-bb7a-72d9b20ad321/1200/1200/False/the-almanack-of-naval-ravikant.jpg",
+    "spineColor": "#fff",
+    "textColor": "#000"
+  },
+  {
+    "title": "Awaken the Giant Within",
+    "coverUrl": "https://kbimages1-a.akamaihd.net/8e2d7277-e8c5-453b-998e-8f17348a69c2/1200/1200/False/awaken-the-giant-within.jpg",
+    "spineColor": "#b38e32",
+    "textColor": "#000"
+  },
+  {
+    "title": "Six Easy Pieces",
+    "coverUrl": "https://pictures.abebooks.com/isbn/9780201409567-us.jpg",
+    "spineColor": "#f22411",
+    "textColor": "#340b52"
+  },
+  {
+    "title": "On The Shortness of Life",
+    "coverUrl": "https://m.media-amazon.com/images/I/41HlG+jCHDL._AC_SY780_.jpg",
+    "spineColor": "#192859",
+    "textColor": "#fff"
+  },
+  {
+    "title": "From Third World To First",
+    "coverUrl": "https://m.media-amazon.com/images/I/41QFuIPHVOL._AC_SY780_.jpg",
+    "spineColor": "#000",
+    "textColor": "#fff"
+  },
+  {
+    "title": "Building An Elite Organization",
+    "coverUrl": "https://m.media-amazon.com/images/I/41dfmBIUJQS._AC_SY780_.jpg",
+    "spineColor": "#245cab",
+    "textColor": "#fff"
+  },
+  {
+    "title": "The Graveyard Book",
+    "coverUrl": "https://m.media-amazon.com/images/I/51f63bXc2NL.jpg",
+    "spineColor": "#0e1653",
+    "textColor": "#fff"
+  },
+  {
+    "title": "Moonwalking with Einstein",
+    "coverUrl": "https://upload.wikimedia.org/wikipedia/en/5/59/Moonwalking_with_einstein.jpg",
+    "spineColor": "#fff",
+    "textColor": "#000"
+  },
+  {
+    "title": "Range",
+    "coverUrl": "https://kbimages1-a.akamaihd.net/f09ff700-d9f8-4a54-a65c-d0059bdbde25/1200/1200/False/range-3.jpg",
+    "spineColor": "#6befe0",
+    "textColor": "#000"
+  },
+  {
+    "title": "On Intelligence",
+    "coverUrl": "https://m.media-amazon.com/images/I/41PbdH-FFEL._AC_SY780_.jpg",
+    "spineColor": "#2f68c9",
+    "textColor": "#fff"
+  }
+]

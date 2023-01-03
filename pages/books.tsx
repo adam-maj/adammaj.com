@@ -12,6 +12,7 @@ import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import fs from "fs";
+import path from "path";
 
 interface IBook {
   title: string;
@@ -257,7 +258,12 @@ export default Books;
 Books.getLayout = (page) => <Layout>{page}</Layout>;
 
 export async function getServerSideProps() {
-  const books = JSON.parse(fs.readFileSync("content/books/index.json", "utf8"));
+  const books = JSON.parse(
+    fs.readFileSync(
+      path.join(process.cwd(), "content/books/index.json"),
+      "utf8"
+    )
+  );
 
   return {
     props: {

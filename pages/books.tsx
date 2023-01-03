@@ -50,11 +50,11 @@ const Books: NextPageWithLayout<BooksProps> = ({ books }) => {
   const bookHeight = `${height}px`;
 
   const scrollLeft = () => {
-    boundedScroll(scroll + 200);
+    boundedScroll(scroll + 250);
   };
 
   const scrollRight = () => {
-    boundedScroll(scroll - 200);
+    boundedScroll(scroll - 250);
   };
 
   const boundedScroll = (scrollX: number) => {
@@ -177,7 +177,7 @@ const Books: NextPageWithLayout<BooksProps> = ({ books }) => {
                   mt="20px"
                   as="h2"
                   style={{ writingMode: "vertical-lr" }}
-                  fontSize="lg"
+                  fontSize="md"
                   fontFamily={`"DM Sans", sans-serif`}
                   userSelect="none"
                 >

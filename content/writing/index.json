@@ -1,0 +1,94 @@
+[
+  {
+    "title": "A proven framework for efficiently building technical competence in any field",
+    "description": "How to quickly become technical in any subject",
+    "date": "June 3, 2021",
+    "image": "https://khazar.org/uploads/files/engineering/images/1m.jpg",
+    "url": "https://medium.com/@adam-maj/a-proven-framework-for-efficiently-building-technical-competence-in-any-field-c3131c27d89f",
+    "external": true
+  },
+  {
+    "title": "The incredible nature of DMT: building alien worlds",
+    "description": "An exploration of the science behind N,N-Dimethyltryptamine (DMT) and what it could mean",
+    "date": "May 3, 2021",
+    "image": "https://miro.medium.com/max/1400/0*Ah9RakYvHZXkpQ_G.webp",
+    "url": "https://medium.com/@adam-maj/dmt-the-brain-building-alien-worlds-8be4be5efe85",
+    "external": true
+  },
+  {
+    "title": "The deep truth that lies in the seemingly irrational",
+    "description": "Why some of the most important truths lie in the things we are most skeptical of",
+    "image": "https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F3bb4eaca-e7f8-4efe-8bd4-c0384d4dff1e_1110x555.jpeg",
+    "date": "May 1, 2021",
+    "url": "/writing/open-mindedness",
+    "external": false
+  },
+  {
+    "title": "Nihilism: the natural stepping stone toward introspection, awareness, and existentialism",
+    "description": "Why nihilism is often the first step toward personal philosophical growth",
+    "image": "http://i.gzn.jp/img/2017/07/28/optimistic-nihilism/cap00002.png",
+    "date": "April 1, 2021",
+    "url": "/writing/nihilism",
+    "external": false
+  },
+  {
+    "title": "An exploration of sustainable and self-sufficient productivity",
+    "description": "An (over-simplified) framework for effective productivity systems.",
+    "date": "March 24, 2021",
+    "url": "/writing/productivity",
+    "external": false
+  },
+  {
+    "title": "A thought experiment on conscious perception and non-duality",
+    "description": "Exploring non-duality through the subjective experience of senses",
+    "image": "https://www.diarioeconomico.co.mz/wp-content/uploads/2022/12/psychedelic-treatments_Easy-Resize.com_.jpg",
+    "date": "March 18, 2021",
+    "url": "/writing/perception",
+    "external": false
+  },
+  {
+    "title": "The importance of open mindedness in politics",
+    "description": "Why politics can't be as black and white as we often make it out to be",
+    "date": "March 13, 2021",
+    "url": "/writing/politics",
+    "external": false
+  },
+  {
+    "title": "An unconventional perspective on happiness and meaning",
+    "description": "Thoughts from younger me on what defines meaning in life",
+    "image": "https://kurzgesagt.org/wp-content/uploads/2018/07/inanutshell-kurzgesagt-optimistic-nihilism-04.png",
+    "date": "February 4, 2021",
+    "url": "/writing/meaning",
+    "external": false
+  },
+  {
+    "title": "The secret to rapid learning and growth in the age of technology",
+    "description": "A guide on effectively learning how to learn",
+    "date": "May 9, 2020",
+    "url": "https://medium.com/@adam-maj/meta-learning-the-secret-to-rapid-learning-and-growth-in-the-age-of-technology-eea8693ae3a3",
+    "external": true
+  },
+  {
+    "title": "How to increase your motivation and get back in control of your life",
+    "description": "My experience and observations on dopamine detoxes and how powerful they can be",
+    "date": "May 2, 2020",
+    "image": "https://miro.medium.com/max/1400/1*c8XpYy-vbpyBIbeHgErw8A.webp",
+    "url": "https://medium.com/@adam-maj/increasing-internal-motivation-and-getting-back-in-control-of-yourself-ff171a2bbb87",
+    "external": true
+  },
+  {
+    "title": "The ultimate guide to learning about artificial intelligence",
+    "description": "The complete guide to getting started with AI",
+    "date": "April 30, 2020",
+    "image": "https://miro.medium.com/max/1400/1*PvjBTPY5KvtJoSoCUipzWw.webp",
+    "url": "https://medium.com/@adam-maj/the-ultimate-guide-to-becoming-an-artificial-intelligence-expert-db5124dc8ae0",
+    "external": true
+  },
+  {
+    "title": "The enemy of progress: the dangers of complacency",
+    "description": "A simple exploration of complacency in it's different forms",
+    "date": "April 10, 2020",
+    "url": "https://medium.com/@adam-maj/the-enemy-of-progress-what-is-complacency-and-how-can-we-avoid-it-5e988cafa1e8",
+    "external": true
+  }
+]

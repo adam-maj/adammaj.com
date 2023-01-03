@@ -18,7 +18,7 @@ function Navigation({
   return (
     <Link href={link} target={isExternal ? "_blank" : "_self"}>
       <Text
-        fontFamily={`"Lora", sans`}
+        fontFamily={`"Lora", serif`}
         fontSize="lg"
         color={isActive ? "black" : "gray.500"}
         _hover={{ color: "black" }}
@@ -67,7 +67,7 @@ function Layout({ children }: PropsWithChildren) {
           </Navigation>
         </VStack>
       </VStack>
-      <Container width="container.lg">{children}</Container>
+      <Container width="container.md">{children}</Container>
     </Container>
   );
 }

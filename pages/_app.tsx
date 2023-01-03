@@ -8,7 +8,7 @@ const theme = extendTheme(
   {
     fonts: {
       heading: `"Lora", serif`,
-      body: `"DM Sans", sans-serif`,
+      body: `"Lora", sans-serif`,
     },
   },
   withProse({
@@ -18,7 +18,7 @@ const theme = extendTheme(
         mb: 4,
       },
       p: {
-        my: 2.5,
+        my: 3,
       },
       a: {
         color: "blue.500",

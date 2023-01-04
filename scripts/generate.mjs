@@ -54,7 +54,7 @@ async function books() {
         const contentPath = path.join(basePath, fileName);
         const fileContents = fs
           .readFileSync(contentPath, "utf8")
-          .split("### Notes")[0];
+          .split("## My Notes")[0];
         const source = await serialize(fileContents, {
           parseFrontmatter: true,
           mdxOptions: { development: false },

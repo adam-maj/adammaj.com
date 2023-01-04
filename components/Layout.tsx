@@ -13,7 +13,8 @@ function Navigation({
   isExternal?: boolean;
 }) {
   const router = useRouter();
-  const isActive = router.asPath === link;
+  const isActive =
+    link === "/" ? router.asPath === link : router.asPath.includes(link);
 
   return (
     <Link href={link} target={isExternal ? "_blank" : "_self"}>

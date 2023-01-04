@@ -1,58 +1,45 @@
-import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import { GetStaticPropsContext, NextPageWithLayout } from "next";
-import path from "path";
-import fs from "fs";
-import { Heading, Image, Flex } from "@chakra-ui/react";
+import { Heading, Flex } from "@chakra-ui/react";
 import { Prose } from "@nikolovlazar/chakra-ui-prose";
 import Layout from "../../components/Layout";
+import { getAllSlugs, getPost, Post as PostMetadata } from "../../lib/writing";
+import { Content } from "../../lib/mdx";
 
-interface MdxProps {
-  source: {
-    frontmatter: {
-      [key: string]: any;
-    };
-    compiledSource: string;
-  };
+interface PostProps {
+  post: Content<PostMetadata>;
 }
 
-const Mdx: NextPageWithLayout<MdxProps> = ({ source }) => {
+const Post: NextPageWithLayout<PostProps> = ({ post }) => {
   return (
-    <Flex direction="column">
-      <Heading size="xl">{source.frontmatter.title}</Heading>
+    <Flex direction="column" gap={4}>
+      <Heading size="xl">{post.metadata.title}</Heading>
       <Prose>
-        <MDXRemote {...source} />
+        <MDXRemote compiledSource={post.source} />
       </Prose>
     </Flex>
   );
 };
 
-export default Mdx;
+export default Post;
 
-Mdx.getLayout = (page) => <Layout>{page}</Layout>;
+Post.getLayout = (page) => <Layout>{page}</Layout>;
 
 export async function getStaticProps({ params }: GetStaticPropsContext) {
-  if (!params) {
-    return { props: {} };
+  if (!params || !params.slug || typeof params.slug !== "string") {
+    return { redirect: { destination: "/" } };
   }
 
-  const contentPath = path.join("content/writing", `${params.slug}.mdx`);
-  const fileContents = fs.readFileSync(contentPath, "utf8");
-  const source = await serialize(fileContents, {
-    parseFrontmatter: true,
-    mdxOptions: { development: false },
-  });
+  const post = await getPost(params.slug as string);
+  if (!post) {
+    return { redirect: { destination: "/" } };
+  }
 
-  return { props: { source } };
+  return { props: { post } };
 }
 
 export async function getStaticPaths() {
-  // getting all paths of each article as an array of
-  // objects with their unique slugs
-  const paths = fs
-    .readdirSync("content/writing")
-    .filter((fileName) => fileName.includes(".mdx"))
-    .map((slug) => ({ params: { slug: slug.split(".")[0] } }));
+  const paths = getAllSlugs();
 
   return {
     paths,

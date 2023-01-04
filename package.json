@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn generate && next build",
     "start": "next start",
     "lint": "next lint",
-    "generate": "node scripts/generate-writing.mjs"
+    "generate": "node scripts/generate.mjs"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.6",

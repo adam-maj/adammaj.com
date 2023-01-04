@@ -1,4 +1,4 @@
-import { Container, VStack, Text } from "@chakra-ui/react";
+import { Container, VStack, Text, Flex, Box } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { PropsWithChildren } from "react";
@@ -32,42 +32,48 @@ function Navigation({
 function Layout({ children }: PropsWithChildren) {
   return (
     <Container position="relative" mt={20} pb="10em">
-      <VStack
-        position="absolute"
-        right="100%"
-        mr={16}
-        align="flex-start"
-        spacing={10}
-      >
-        <VStack align="flex-start">
-          <Text fontWeight="bold" fontSize="smaller">
-            NAVIGATION
-          </Text>
-          <Navigation link="/">Home</Navigation>
-          <Navigation link="/writing">Writing</Navigation>
-          <Navigation link="/engineering">Engineering</Navigation>
-          <Navigation link="/books">Books</Navigation>
-          <Navigation link="/notes">Notes</Navigation>
+      <Flex position="absolute" right="100%" mr="140px">
+        <VStack position="fixed" align="flex-start" spacing={10}>
+          <VStack align="flex-start">
+            <Text fontWeight="bold" fontSize="smaller">
+              NAVIGATION
+            </Text>
+            <Navigation link="/">Home</Navigation>
+            <Navigation link="/writing">Writing</Navigation>
+            <Navigation link="/engineering">Engineering</Navigation>
+            <Navigation link="/books">Books</Navigation>
+            <Navigation link="/notes">Notes</Navigation>
+          </VStack>
+          <VStack align="flex-start">
+            <Text fontWeight="bold" fontSize="smaller">
+              FIND ME ON
+            </Text>
+            <Navigation
+              link="https://www.youtube.com/channel/UChRuoAb-aIi-N4LWsRKOYLg"
+              isExternal
+            >
+              YouTube
+            </Navigation>
+            <Navigation link="https://twitter.com/majmudaradam" isExternal>
+              Twitter
+            </Navigation>
+            <Navigation link="https://github.com/adam-maj" isExternal>
+              GitHub
+            </Navigation>
+          </VStack>
         </VStack>
-        <VStack align="flex-start">
-          <Text fontWeight="bold" fontSize="smaller">
-            FIND ME ON
-          </Text>
-          <Navigation
-            link="https://www.youtube.com/channel/UChRuoAb-aIi-N4LWsRKOYLg"
-            isExternal
-          >
-            YouTube
-          </Navigation>
-          <Navigation link="https://twitter.com/majmudaradam" isExternal>
-            Twitter
-          </Navigation>
-          <Navigation link="https://github.com/adam-maj" isExternal>
-            GitHub
-          </Navigation>
-        </VStack>
-      </VStack>
-      <Container width="container.md">{children}</Container>
+      </Flex>
+      <Container width="container.md">
+        <Box
+          width="100%"
+          bg="white"
+          height={20}
+          position="fixed"
+          top={0}
+          zIndex={100}
+        />
+        {children}
+      </Container>
     </Container>
   );
 }

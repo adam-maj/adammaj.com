@@ -1,17 +1,8 @@
 import { Heading, Stack, Flex, Text, Divider } from "@chakra-ui/react";
+import { getAllPostData, Post } from "../../lib/writing";
 import type { NextPageWithLayout } from "next";
 import Layout from "../../components/Layout";
 import Link from "next/link";
-import fs from "fs";
-
-interface Post {
-  title: string;
-  description: string;
-  image: string;
-  date: string;
-  url: string;
-  external: boolean;
-}
 
 interface WritingProps {
   posts: Post[];
@@ -52,9 +43,6 @@ export default Writing;
 Writing.getLayout = (page) => <Layout>{page}</Layout>;
 
 export async function getStaticProps() {
-  const posts = JSON.parse(
-    fs.readFileSync("content/writing/index.json", "utf8")
-  );
-
+  const posts = getAllPostData();
   return { props: { posts } };
 }

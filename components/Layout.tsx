@@ -33,7 +33,7 @@ function Navigation({
 function Layout({ children }: PropsWithChildren) {
   return (
     <Container position="relative" mt={20} pb="10em">
-      <Flex position="absolute" right="100%" mr="140px">
+      <Flex position="absolute" right="100%" mr="160px">
         <VStack position="fixed" align="flex-start" spacing={10}>
           <VStack align="flex-start">
             <Text fontWeight="bold" fontSize="smaller">
@@ -64,7 +64,7 @@ function Layout({ children }: PropsWithChildren) {
           </VStack>
         </VStack>
       </Flex>
-      <Container width="container.md">
+      <Container width="container.md" position="relative">
         <Box
           width="100%"
           bg="white"

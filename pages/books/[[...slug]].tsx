@@ -31,11 +31,6 @@ const Books: NextPageWithLayout<BooksProps> = ({ books, book }) => {
               By: {book.metadata.author} - Read: {book.metadata.date} - Rating:{" "}
               {book.metadata.rating}/10
             </Text>
-            {/* <Text color="gray.500" fontSize="lg">
-              Read: {book.metadata.date}
-              <br />
-              Rating: {book.metadata.rating}/10
-            </Text> */}
           </VStack>
         </Flex>
         <Prose>
@@ -92,10 +87,11 @@ export default Books;
 
 Books.getLayout = (page: JSX.Element) => (
   <Layout>
-    <Stack spacing={8}>
+    <Flex direction="column" gap={8}>
       <Bookshelf books={page.props.books} />
+      <Divider width="container.sm" />
       {page}
-    </Stack>
+    </Flex>
   </Layout>
 );
 

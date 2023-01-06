@@ -49,8 +49,8 @@ function Layout({ children }: PropsWithChildren) {
   return (
     <Container
       position="relative"
-      mt={{ base: 16, lg: 20 }}
-      pb={{ md: "10em" }}
+      mt={{ base: 16, md: 20 }}
+      pb={{ base: 8, md: "10em" }}
       gap={{ md: 10 }}
     >
       <Flex

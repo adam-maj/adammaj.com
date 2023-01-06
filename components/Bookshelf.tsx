@@ -169,7 +169,7 @@ export function Bookshelf({ books }: BookshelfProps) {
       <Box position="relative" ref={bookshelfRef}>
         <Box
           position="absolute"
-          left={"-36px"}
+          left={{ base: "-28px", md: "-36px" }}
           height="100%"
           display={scroll > minScroll ? "block" : "none"}
         >
@@ -179,6 +179,7 @@ export function Bookshelf({ books }: BookshelfProps) {
             height="100%"
             width="28px"
             _hover={{ bg: "gray.100" }}
+            borderRightRadius={{ base: 0, md: undefined }}
           >
             <Icon as={FaChevronLeft} boxSize={3} />
           </Center>
@@ -321,13 +322,14 @@ export function Bookshelf({ books }: BookshelfProps) {
         </HStack>
         <Box
           position="absolute"
-          right={"-36px"}
+          right={{ base: "-28px", md: "-36px" }}
           pl="10px"
           height="100%"
           top={0}
           display={scroll < maxScroll ? "block" : "none"}
         >
           <Center
+            borderLeftRadius={{ base: 0, md: undefined }}
             ref={scrollRightRef}
             height="100%"
             borderRadius="md"

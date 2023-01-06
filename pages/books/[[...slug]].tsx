@@ -24,7 +24,7 @@ const Books: NextPageWithLayout<BooksProps> = ({ books, book }) => {
   if (book) {
     return (
       <Stack spacing={3}>
-        <Flex direction="row" width="container.sm" align="flex-start" gap={6}>
+        <Flex direction="row" align="flex-start" gap={6}>
           <VStack align="flex-start" flexGrow={1}>
             <Heading size="xl">{book.metadata.title}</Heading>
             <Text color="gray.400" fontSize="xl">
@@ -46,22 +46,16 @@ const Books: NextPageWithLayout<BooksProps> = ({ books, book }) => {
         .slice()
         .sort((a, b) => b.rating - a.rating)
         .map((book, index) => (
-          <Stack width="container.sm" key={book.title} scrollMarginTop={20}>
-            <Stack width="container.sm">
+          <Stack key={book.title} scrollMarginTop={20}>
+            <Stack>
               {index > 0 && <Divider mb={3} width="100%" />}
-              <Flex
-                direction="row"
-                width="container.sm"
-                align="flex-start"
-                gap={6}
-              >
+              <Flex direction="row" align="flex-start" gap={6}>
                 <Image
                   border="1px solid"
                   borderColor="gray.200"
                   src={book.coverImage}
                   alt={book.title}
-                  width={"110px"}
-                  height={"160px"}
+                  height={{ base: "100px", sm: "140px", md: "160px" }}
                 />
                 <VStack align="flex-start" flexGrow={1}>
                   <Heading size="md">{book.title}</Heading>
@@ -89,7 +83,7 @@ Books.getLayout = (page: JSX.Element) => (
   <Layout>
     <Flex direction="column" gap={8}>
       <Bookshelf books={page.props.books} />
-      <Divider width="container.sm" />
+      <Divider />
       {page}
     </Flex>
   </Layout>

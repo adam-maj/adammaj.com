@@ -6,6 +6,7 @@ import {
   Heading,
   Image,
   Center,
+  useDimensions,
 } from "@chakra-ui/react";
 import React from "react";
 import { Book } from "../lib/books";
@@ -22,15 +23,15 @@ export function Bookshelf({ books }: BookshelfProps) {
   const [scroll, setScroll] = React.useState(-200);
 
   const bookshelfRef = React.useRef<HTMLDivElement>(null);
+  const viewportRef = React.useRef<HTMLDivElement>(null);
   const scrollRightRef = React.useRef<HTMLDivElement>(null);
   const scrollLeftRef = React.useRef<HTMLDivElement>(null);
+  const viewportDimensions = useDimensions(viewportRef, true);
   const [isScrolling, setIsScrolling] = React.useState(false);
-  const [showRightArrow, setShowRightArrow] = React.useState(false);
-  const [showLeftArrow, setShowLeftArrow] = React.useState(false);
+  const [booksInViewport, setBooksInViewport] = React.useState(0);
 
   const width = 41.5;
   const height = 220;
-  const booksInViewport = 12;
 
   const spineWidth = `${width}px`;
   const coverWidth = `${width * 4}px`;
@@ -40,19 +41,11 @@ export function Bookshelf({ books }: BookshelfProps) {
   const minScroll = 0;
   const maxScroll = React.useMemo(() => {
     return (
-      (width + 10) * (books.length - booksInViewport) +
-      (bookIndex > -1 ? width * 4 : 0)
+      (width + 11) * (books.length - booksInViewport) +
+      (bookIndex > -1 ? width * 4 : 0) +
+      5
     );
-  }, [bookIndex, books.length]);
-
-  React.useEffect(() => {
-    if (bookIndex === -1) {
-      boundedScroll(scroll);
-    } else {
-      boundedScroll((bookIndex - 4) * (width + 11));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [bookIndex]);
+  }, [bookIndex, books.length, booksInViewport]);
 
   const boundedScroll = (scrollX: number) => {
     setScroll(Math.max(minScroll, Math.min(maxScroll, scrollX)));
@@ -68,29 +61,24 @@ export function Bookshelf({ books }: BookshelfProps) {
   );
 
   React.useEffect(() => {
+    if (bookIndex === -1) {
+      boundedRelativeScroll(0);
+    } else {
+      boundedScroll((bookIndex - (booksInViewport - 4.5) / 2) * (width + 11));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [bookIndex, boundedRelativeScroll]);
+
+  React.useEffect(() => {
+    if (viewportDimensions) {
+      boundedRelativeScroll(0);
+      const numberOfBooks = viewportDimensions.contentBox.width / (width + 11);
+      setBooksInViewport(numberOfBooks);
+    }
+  }, [viewportDimensions, boundedRelativeScroll]);
+
+  React.useEffect(() => {
     let scrollInterval: NodeJS.Timeout | null = null;
-
-    const showArrows = (event: MouseEvent) => {
-      const rect = bookshelfRef.current!.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const sections = 7;
-      const boundary = rect.width / sections;
-
-      if (x > boundary * (sections - 1)) {
-        setShowLeftArrow(false);
-        setShowRightArrow(true);
-      } else if (x < boundary) {
-        setShowRightArrow(false);
-        setShowLeftArrow(true);
-      } else {
-        hideArrows();
-      }
-    };
-
-    const hideArrows = () => {
-      setShowLeftArrow(false);
-      setShowRightArrow(false);
-    };
 
     const setScrollRightInterval = () => {
       setIsScrolling(true);
@@ -113,11 +101,6 @@ export function Bookshelf({ books }: BookshelfProps) {
       }
     };
 
-    const currentBookshelfRef = bookshelfRef.current;
-
-    currentBookshelfRef!.addEventListener("mousemove", showArrows);
-    currentBookshelfRef!.addEventListener("mouseleave", hideArrows);
-
     const currentScrollRightRef = scrollRightRef.current;
 
     currentScrollRightRef!.addEventListener(
@@ -132,9 +115,6 @@ export function Bookshelf({ books }: BookshelfProps) {
     currentScrollLeftRef!.addEventListener("mouseleave", clearScrollInterval);
 
     return () => {
-      currentBookshelfRef!.removeEventListener("mousemove", showArrows);
-      currentBookshelfRef!.removeEventListener("mouseleave", hideArrows);
-
       clearScrollInterval();
 
       currentScrollRightRef!.removeEventListener(
@@ -186,7 +166,7 @@ export function Bookshelf({ books }: BookshelfProps) {
         </defs>
       </svg>
 
-      <Box position="relative" width="container.sm" ref={bookshelfRef}>
+      <Box position="relative" ref={bookshelfRef}>
         <Box
           position="absolute"
           left={"-36px"}
@@ -206,9 +186,9 @@ export function Bookshelf({ books }: BookshelfProps) {
         <HStack
           alignItems="center"
           gap={1}
-          width="container.sm"
           overflowX="hidden"
           cursor="grab"
+          ref={viewportRef}
         >
           {books.map((book, index) => {
             return (

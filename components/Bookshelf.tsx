@@ -261,6 +261,10 @@ export function Bookshelf({ books }: BookshelfProps) {
                     fontFamily={`"DM Sans", sans-serif`}
                     style={{ writingMode: "vertical-rl" }}
                     userSelect="none"
+                    textOverflow="ellipsis"
+                    whiteSpace="nowrap"
+                    overflow="hidden"
+                    maxHeight={`${height - 24}px`}
                   >
                     {book.title}
                   </Heading>

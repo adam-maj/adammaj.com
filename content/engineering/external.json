@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Zero Knowlege Mastermind",
+    "description": "Smart-contract based mastermind game secured with zero knowlege proofs.",
+    "date": "November 14, 2022",
+    "image": "https://github.com/adam-maj/zk-mastermind/raw/main/public/mastermind.png",
+    "url": "https://zk-mastermind.vercel.app"
+  },
+  {
+    "title": "Dovetale",
+    "description": "An affiliate and influencer marketing platform where I built machine learning algorithms to improve search, and worked as a full-stack engineer. Later acquired by Shopify.",
+    "date": "March 31, 2021",
+    "image": "https://talkcmo.com/wp-content/uploads/2020/02/Dovetale-Launches-Integration-With-Shopify-to-Help-Brands-Track-Influencer-Marketing-Conversions-and-Speed-Up-Process-Working-With-Creators.jpg",
+    "url": "https://dovetale.com/"
+  },
+  {
+    "title": "Von Token",
+    "description": "My own ERC20 cryptocurrency with Solidity and built a decentralized appliation to interact with it.",
+    "date": "March 10, 2021",
+    "image": "https://vontoken.vercel.app/DApp.jpg",
+    "url": "https://vontoken.vercel.app/"
+  },
+  {
+    "title": "Ascend",
+    "description": "Real estate data aggregation and search platform I built as the product manager.",
+    "date": "December 1, 2020",
+    "image": "https://static.vecteezy.com/system/resources/previews/000/661/920/non_2x/real-estate-isometric-illustration-vector-graphic.jpg",
+    "url": "https://ascendbuild.co/"
+  },
+  {
+    "title": "Neural Network Engine",
+    "description": "An basic engine to build multi-layer neural networks. I made a simple neural network with the engine to demonstrate its capability.",
+    "date": "May 5, 2020",
+    "image": "https://st4.depositphotos.com/4678873/26517/v/600/depositphotos_265173376-stock-video-artificial-neural-networks-isometric-concept.jpg",
+    "url": "https://colab.research.google.com/drive/1lOPb-V4UYwZnURc1HNYiKn4cuzKdpRTx?usp=sharing"
+  },
+  {
+    "title": "Deep Learning Chatbot Engine",
+    "description": "An engine to create customizable chatbots (using an admittedly simple approach), with my own chatbot built from the engine.",
+    "date": "February 1, 2020",
+    "image": "https://miro.medium.com/max/4000/1*m9IJdAYW04MYh75ivpwUNA.png",
+    "url": "https://colab.research.google.com/drive/1X9xv5yyc4ESfWWaH8-htwJwQfkzKYYUx"
+  },
+  {
+    "title": "TruckWorld Reinforcement Learning",
+    "description": "Reinforcement learning environment functionally similar to OpenAI Gym. I also built an agent to run in the environment.",
+    "date": "January 1, 2020",
+    "image": "https://www.kdnuggets.com/images/mathworks-reinforcement-learning-fig1-543.jpg",
+    "url": "https://colab.research.google.com/drive/1FqZepXGWDF2PvVzncqf5oB5DIaXoydPv"
+  },
+  {
+    "title": "Trip Advisor Sentiment Analysis",
+    "description": "I scraped the Trip Advisor reviews for Barclays Center in NYC to analyze customer sentiment.",
+    "date": "December 1, 2019",
+    "image": "https://www.revuze.it/wp-content/uploads/2019/07/sentiment-analysis-Featured-1024x576.png",
+    "url": "https://colab.research.google.com/drive/1VMdJVcoxWWxyAMj-yu_Q6ktWs-GX4-sH"
+  },
+  {
+    "title": "Bank Customer Analysis",
+    "description": "A neural network that analyzes data about bank customers to predict their likelihood of remaining with a given bank.",
+    "date": "November 1, 2019",
+    "image": "https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/bank_2_660x450_240120042323_260620110758.jpg",
+    "url": "https://colab.research.google.com/drive/1stLWnNExen8nat0gEdQbnEgCeZ3UdGnO"
+  }
+]

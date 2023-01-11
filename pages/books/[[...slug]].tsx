@@ -31,14 +31,6 @@ const Books: NextPageWithLayout<BooksProps> = ({ books, book }) => {
           openGraph={{
             title: book.metadata.title,
             description: `By: ${book.metadata.author} - Read: ${book.metadata.date} - Rating: ${book.metadata.rating}/10`,
-            images: [
-              {
-                url: book.metadata.coverImage,
-                width: 800,
-                height: 1200,
-                type: "image/jpeg",
-              },
-            ],
           }}
         />
         <Stack spacing={3}>

@@ -38,7 +38,7 @@ const getDefaultLayout = (page: ReactElement) => (
 
 export default function App({ Component, pageProps }: AppProps) {
   usePostHog("phc_jFlJqpi333LZJJRxwjiFTkKI2Ufv3Pgf0hnbrPuZdLL", {
-    api_host: "https://a.thirdweb.com",
+    api_host: "https://app.posthog.com",
   });
 
   const getLayout = Component.getLayout || getDefaultLayout;

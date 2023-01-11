@@ -2,8 +2,9 @@ import type { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Prose, withProse } from "@nikolovlazar/chakra-ui-prose";
 import Layout from "../components/Layout";
-import { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 import { DefaultSeo } from "next-seo";
+import posthog from "posthog-js";
 
 const theme = extendTheme(
   {
@@ -36,6 +37,12 @@ const getDefaultLayout = (page: ReactElement) => (
 
 export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || getDefaultLayout;
+
+  useEffect(() => {
+    posthog.init("phc_hKK4bo8cHZrKuAVXfXGpfNSLSJuucUnguAgt2j6dgSV", {
+      api_host: "https://a.thirdweb.com",
+    });
+  });
 
   return (
     <ChakraProvider theme={theme}>

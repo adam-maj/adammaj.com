@@ -14,13 +14,18 @@ export interface Book {
   summary: string;
 }
 
-export async function getAllBooks(): Promise<Book[]> {
+export function getAllBooks(): Book[] {
   return JSON.parse(
     fs.readFileSync(
       path.join(process.cwd(), "content", "books", "index.json"),
       "utf8"
     )
   );
+}
+
+export function getAllSlugs(): string[] {
+  const data = getAllBooks();
+  return data.map((item) => item.slug);
 }
 
 export async function getBook(slug: string): Promise<MaybeContent<Book>> {

@@ -3284,6 +3284,13 @@ next-seo@^5.15.0:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.15.0.tgz#b1a90508599774982909ea44803323c6fb7b50f4"
   integrity sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==
 
+next-use-posthog@^1.16.4:
+  version "1.16.4"
+  resolved "https://registry.yarnpkg.com/next-use-posthog/-/next-use-posthog-1.16.4.tgz#a8151591948b9a420cf8e1ef92f120a8fea69b0f"
+  integrity sha512-h35P8ev5zFY88DGOMtoNnL7kgaEM8dPx445DsjCpduXoFre7DrnvZdu+MiRXVcvri0LEIFcT9O+gruyZvjl1tg==
+  dependencies:
+    posthog-js "^1.38.0"
+
 next@13.1.1:
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/next/-/next-13.1.1.tgz#42b825f650410649aff1017d203a088d77c80b5b"
@@ -3494,7 +3501,7 @@ postcss@8.4.14:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-posthog-js@^1.39.2:
+posthog-js@^1.38.0:
   version "1.39.2"
   resolved "https://registry.yarnpkg.com/posthog-js/-/posthog-js-1.39.2.tgz#07b9b43fc369e8b294b32263598bc89952cc0b3a"
   integrity sha512-IKdG5smnezeq0VHyx6JmIF2UjUvkKCpwvK5OOhwwhv4J5oq9+dpfI88B7eF07sSwc77uuGwE6+RhX1vhCYddew==

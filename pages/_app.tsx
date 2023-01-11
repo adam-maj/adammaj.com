@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import { ReactElement, useEffect } from "react";
 import { DefaultSeo } from "next-seo";
 import posthog from "posthog-js";
+import { usePostHog } from "next-use-posthog";
 
 const theme = extendTheme(
   {
@@ -36,13 +37,11 @@ const getDefaultLayout = (page: ReactElement) => (
 );
 
 export default function App({ Component, pageProps }: AppProps) {
-  const getLayout = Component.getLayout || getDefaultLayout;
-
-  useEffect(() => {
-    posthog.init("phc_hKK4bo8cHZrKuAVXfXGpfNSLSJuucUnguAgt2j6dgSV", {
-      api_host: "https://a.thirdweb.com",
-    });
+  usePostHog("phc_hKK4bo8cHZrKuAVXfXGpfNSLSJuucUnguAgt2j6dgSV", {
+    api_host: "https://a.thirdweb.com",
   });
+
+  const getLayout = Component.getLayout || getDefaultLayout;
 
   return (
     <ChakraProvider theme={theme}>

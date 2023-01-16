@@ -61,6 +61,18 @@ export function Bookshelf({ books }: BookshelfProps) {
   );
 
   React.useEffect(() => {
+    if (router.query.slug && router.query.slug.length > 0 && bookIndex === -1) {
+      const idx = books.findIndex((b) =>
+        b.slug
+          .toLowerCase()
+          .includes((router.query.slug as string[])[0].toLowerCase())
+      );
+      console.log(idx);
+      setBookIndex(idx);
+    }
+  }, []);
+
+  React.useEffect(() => {
     if (bookIndex === -1) {
       boundedRelativeScroll(0);
     } else {
@@ -83,14 +95,14 @@ export function Bookshelf({ books }: BookshelfProps) {
     const setScrollRightInterval = () => {
       setIsScrolling(true);
       scrollInterval = setInterval(() => {
-        boundedRelativeScroll(3);
+        boundedRelativeScroll(4);
       }, 10);
     };
 
     const setScrollLeftInterval = () => {
       setIsScrolling(true);
       scrollInterval = setInterval(() => {
-        boundedRelativeScroll(-3);
+        boundedRelativeScroll(-4);
       }, 10);
     };
 

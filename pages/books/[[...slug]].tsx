@@ -6,6 +6,7 @@ import {
   VStack,
   Text,
   Divider,
+  Link,
 } from "@chakra-ui/react";
 import { GetStaticPropsContext, NextPageWithLayout } from "next";
 import Layout from "../../components/Layout";
@@ -70,8 +71,11 @@ const Books: NextPageWithLayout<BooksProps> = ({ books, book }) => {
                     alt={book.title}
                     height={{ base: "100px", sm: "140px", md: "160px" }}
                   />
+
                   <VStack align="flex-start" flexGrow={1}>
-                    <Heading size="md">{book.title}</Heading>
+                    <Link href={book.slug}>
+                      <Heading size="md">{book.title}</Heading>
+                    </Link>
                     <Text color="#999" size="md">
                       {book.author}
                     </Text>

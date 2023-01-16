@@ -2,10 +2,11 @@ import type { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Prose, withProse } from "@nikolovlazar/chakra-ui-prose";
 import Layout from "../components/Layout";
-import { ReactElement, useEffect } from "react";
+import { ReactElement } from "react";
 import { DefaultSeo } from "next-seo";
 import posthog from "posthog-js";
-import { usePostHog } from "next-use-posthog";
+import React from "react";
+import { useRouter } from "next/router";
 
 const theme = extendTheme(
   {
@@ -37,11 +38,21 @@ const getDefaultLayout = (page: ReactElement) => (
 );
 
 export default function App({ Component, pageProps }: AppProps) {
-  usePostHog("phc_jFlJqpi333LZJJRxwjiFTkKI2Ufv3Pgf0hnbrPuZdLL", {
-    api_host: "https://app.posthog.com",
-  });
-
+  const router = useRouter();
   const getLayout = Component.getLayout || getDefaultLayout;
+
+  React.useEffect(() => {
+    posthog.init("phc_jFlJqpi333LZJJRxwjiFTkKI2Ufv3Pgf0hnbrPuZdLL", {
+      api_host: "https://app.posthog.com",
+    });
+
+    const handleRouteChange = () => posthog.capture("$pageview");
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, []);
 
   return (
     <ChakraProvider theme={theme}>

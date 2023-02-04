@@ -7,6 +7,7 @@ import {
   Image,
   Center,
   useDimensions,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { Book } from "../lib/books";
@@ -29,6 +30,10 @@ export function Bookshelf({ books }: BookshelfProps) {
   const viewportDimensions = useDimensions(viewportRef, true);
   const [isScrolling, setIsScrolling] = React.useState(false);
   const [booksInViewport, setBooksInViewport] = React.useState(0);
+  const scrollEvents = useBreakpointValue({
+    base: { start: "mousedown", stop: "mouseup" },
+    sm: { start: "mouseenter", stop: "mouseleave" },
+  });
 
   const width = 41.5;
   const height = 220;
@@ -41,7 +46,7 @@ export function Bookshelf({ books }: BookshelfProps) {
   const minScroll = 0;
   const maxScroll = React.useMemo(() => {
     return (
-      (width + 11) * (books.length - booksInViewport) +
+      (width + 12) * (books.length - booksInViewport) +
       (bookIndex > -1 ? width * 4 : 0) +
       5
     );
@@ -67,7 +72,6 @@ export function Bookshelf({ books }: BookshelfProps) {
           .toLowerCase()
           .includes((router.query.slug as string[])[0].toLowerCase())
       );
-      console.log(idx);
       setBookIndex(idx);
     }
   }, []);
@@ -90,6 +94,13 @@ export function Bookshelf({ books }: BookshelfProps) {
   }, [viewportDimensions, boundedRelativeScroll]);
 
   React.useEffect(() => {
+    if (!scrollEvents) {
+      return;
+    }
+
+    const currentScrollRightRef = scrollRightRef.current;
+    const currentScrollLeftRef = scrollLeftRef.current;
+
     let scrollInterval: NodeJS.Timeout | null = null;
 
     const setScrollRightInterval = () => {
@@ -113,22 +124,35 @@ export function Bookshelf({ books }: BookshelfProps) {
       }
     };
 
-    const currentScrollRightRef = scrollRightRef.current;
-
     currentScrollRightRef!.addEventListener(
-      "mouseenter",
+      scrollEvents.start,
       setScrollRightInterval
     );
-    currentScrollRightRef!.addEventListener("mouseleave", clearScrollInterval);
+    currentScrollRightRef!.addEventListener(
+      scrollEvents.stop,
+      clearScrollInterval
+    );
 
-    const currentScrollLeftRef = scrollLeftRef.current;
-
-    currentScrollLeftRef!.addEventListener("mouseenter", setScrollLeftInterval);
-    currentScrollLeftRef!.addEventListener("mouseleave", clearScrollInterval);
+    currentScrollLeftRef!.addEventListener(
+      scrollEvents.start,
+      setScrollLeftInterval
+    );
+    currentScrollLeftRef!.addEventListener(
+      scrollEvents.stop,
+      clearScrollInterval
+    );
 
     return () => {
       clearScrollInterval();
 
+      currentScrollRightRef!.removeEventListener(
+        "mousedown",
+        setScrollRightInterval
+      );
+      currentScrollRightRef!.removeEventListener(
+        "mouseup",
+        clearScrollInterval
+      );
       currentScrollRightRef!.removeEventListener(
         "mouseenter",
         setScrollRightInterval
@@ -138,6 +162,11 @@ export function Bookshelf({ books }: BookshelfProps) {
         clearScrollInterval
       );
 
+      currentScrollLeftRef!.removeEventListener(
+        "mousedown",
+        setScrollLeftInterval
+      );
+      currentScrollLeftRef!.removeEventListener("mouseup", clearScrollInterval);
       currentScrollLeftRef!.removeEventListener(
         "mouseenter",
         setScrollLeftInterval

@@ -110,14 +110,14 @@ export function Bookshelf({ books }: BookshelfProps) {
     const setScrollRightInterval = () => {
       setIsScrolling(true);
       scrollInterval = setInterval(() => {
-        boundedRelativeScroll(4);
+        boundedRelativeScroll(3);
       }, 10);
     };
 
     const setScrollLeftInterval = () => {
       setIsScrolling(true);
       scrollInterval = setInterval(() => {
-        boundedRelativeScroll(-4);
+        boundedRelativeScroll(-3);
       }, 10);
     };
 

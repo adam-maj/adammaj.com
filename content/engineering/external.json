@@ -1,5 +1,12 @@
 [
   {
+    "title": "The future of authentication is decentralized",
+    "description": "The first fully self-custodied web3-native authentication system",
+    "date": "February 8, 2023",
+    "image": "https://mirror-media.imgix.net/publication-images/QQF3ABSuclchqtj4R2rHN.png?height=1136&width=2271&h=1136&w=2271&auto=compress",
+    "url": "https://mirror.xyz/adammaj.eth/qzI8KjTKP0RdQHC5g6Lp4OReP_LsMmI2ZF5i-klugJA"
+  },
+  {
     "title": "Zero Knowlege Mastermind",
     "description": "Smart-contract based mastermind game secured with zero knowlege proofs.",
     "date": "November 14, 2022",

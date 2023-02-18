@@ -31,7 +31,7 @@ export function Bookshelf({ books }: BookshelfProps) {
   const [isScrolling, setIsScrolling] = React.useState(false);
   const [booksInViewport, setBooksInViewport] = React.useState(0);
   const scrollEvents = useBreakpointValue({
-    base: { start: "mousedown", stop: "mouseup" },
+    base: { start: "touchstart", stop: "touchend" },
     sm: { start: "mouseenter", stop: "mouseleave" },
   });
 
@@ -98,6 +98,10 @@ export function Bookshelf({ books }: BookshelfProps) {
       return;
     }
 
+    // Create a copy of the scroll events to save for clean-up
+    // So it doesn't switch underneath causing us to clean-up the wrong listeners
+    const currentScrollEvents = { ...scrollEvents };
+
     const currentScrollRightRef = scrollRightRef.current;
     const currentScrollLeftRef = scrollLeftRef.current;
 
@@ -106,14 +110,14 @@ export function Bookshelf({ books }: BookshelfProps) {
     const setScrollRightInterval = () => {
       setIsScrolling(true);
       scrollInterval = setInterval(() => {
-        boundedRelativeScroll(4);
+        boundedRelativeScroll(3);
       }, 10);
     };
 
     const setScrollLeftInterval = () => {
       setIsScrolling(true);
       scrollInterval = setInterval(() => {
-        boundedRelativeScroll(-4);
+        boundedRelativeScroll(-3);
       }, 10);
     };
 
@@ -125,20 +129,20 @@ export function Bookshelf({ books }: BookshelfProps) {
     };
 
     currentScrollRightRef!.addEventListener(
-      scrollEvents.start,
+      currentScrollEvents.start,
       setScrollRightInterval
     );
     currentScrollRightRef!.addEventListener(
-      scrollEvents.stop,
+      currentScrollEvents.stop,
       clearScrollInterval
     );
 
     currentScrollLeftRef!.addEventListener(
-      scrollEvents.start,
+      currentScrollEvents.start,
       setScrollLeftInterval
     );
     currentScrollLeftRef!.addEventListener(
-      scrollEvents.stop,
+      currentScrollEvents.stop,
       clearScrollInterval
     );
 
@@ -146,33 +150,20 @@ export function Bookshelf({ books }: BookshelfProps) {
       clearScrollInterval();
 
       currentScrollRightRef!.removeEventListener(
-        "mousedown",
+        currentScrollEvents.start,
         setScrollRightInterval
       );
       currentScrollRightRef!.removeEventListener(
-        "mouseup",
-        clearScrollInterval
-      );
-      currentScrollRightRef!.removeEventListener(
-        "mouseenter",
-        setScrollRightInterval
-      );
-      currentScrollRightRef!.removeEventListener(
-        "mouseleave",
+        currentScrollEvents.stop,
         clearScrollInterval
       );
 
       currentScrollLeftRef!.removeEventListener(
-        "mousedown",
-        setScrollLeftInterval
-      );
-      currentScrollLeftRef!.removeEventListener("mouseup", clearScrollInterval);
-      currentScrollLeftRef!.removeEventListener(
-        "mouseenter",
+        currentScrollEvents.start,
         setScrollLeftInterval
       );
       currentScrollLeftRef!.removeEventListener(
-        "mouseleave",
+        currentScrollEvents.stop,
         clearScrollInterval
       );
     };

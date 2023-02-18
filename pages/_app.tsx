@@ -7,12 +7,15 @@ import { DefaultSeo } from "next-seo";
 import posthog from "posthog-js";
 import React from "react";
 import { useRouter } from "next/router";
+import { Lora } from "@next/font/google";
+
+const lora = Lora({ subsets: ["latin"], display: "swap" });
 
 const theme = extendTheme(
   {
     fonts: {
-      heading: `"Lora", serif`,
-      body: `"Lora", sans-serif`,
+      heading: lora.style.fontFamily,
+      body: lora.style.fontFamily,
     },
   },
   withProse({

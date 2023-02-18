@@ -34,7 +34,6 @@ function Navigation({
   return (
     <Link href={link} target={isExternal ? "_blank" : "_self"}>
       <Text
-        fontFamily={`"Lora", serif`}
         fontSize="lg"
         color={isActive ? "black" : "gray.500"}
         _hover={{ color: "black" }}

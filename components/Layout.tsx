@@ -73,12 +73,6 @@ function Layout({ children }: PropsWithChildren) {
             <Text fontWeight="bold" fontSize="smaller">
               FIND ME ON
             </Text>
-            <Navigation
-              link="https://www.youtube.com/channel/UChRuoAb-aIi-N4LWsRKOYLg"
-              isExternal
-            >
-              YouTube
-            </Navigation>
             <Navigation link="https://twitter.com/majmudaradam" isExternal>
               Twitter
             </Navigation>
@@ -139,12 +133,6 @@ function Layout({ children }: PropsWithChildren) {
                   </MenuGroup>
                   <MenuGroup title="FIND ME ON">
                     <VStack align="flex-start" px={4} spacing={3} mb={2}>
-                      {/* <Navigation
-                        link="https://www.youtube.com/channel/UChRuoAb-aIi-N4LWsRKOYLg"
-                        isExternal
-                      >
-                        YouTube
-                      </Navigation> */}
                       <Navigation
                         link="https://twitter.com/majmudaradam"
                         isExternal

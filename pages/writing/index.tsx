@@ -1,8 +1,7 @@
-import { Heading, Stack, Flex, Text, Divider } from "@chakra-ui/react";
+import { Heading, Link, Flex, Text, Stack, HStack } from "@chakra-ui/react";
 import { getAllPostData, Post } from "../../lib/writing";
 import type { NextPageWithLayout } from "next";
 import Layout from "../../components/Layout";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
 
 interface WritingProps {
@@ -15,26 +14,30 @@ const Writing: NextPageWithLayout<WritingProps> = ({ posts }) => {
       <NextSeo title="Writing | Adam Majmudar" />
       <Flex direction="column" align="flex-start">
         {posts.map((post) => (
-          <Stack width="100%" key={post.title}>
-            <Link href={post.url} target={post.external ? "_blank" : "_self"}>
-              <Stack mb={4} width="100%">
-                <Divider margin="8px 0 !important" width="100%" />
-                <Stack>
-                  <Heading
-                    as="h2"
-                    size="md"
-                    marginTop="8px !important"
-                    mb="0px !important"
-                  >
-                    {post.title}
-                  </Heading>
-                  <Text my={0}>{post.description}</Text>
-                  <Text color="gray.500" mt={0}>
-                    {post.date}
-                  </Text>
-                </Stack>
-              </Stack>
+          <Stack
+            my={1}
+            width="100%"
+            display={{ base: "flex", md: "grid" }}
+            direction={{ base: "column", md: "row" }}
+            gridTemplateColumns={"7fr 3fr"}
+            align="flex-start"
+          >
+            <Link
+              href={post.url}
+              target={post.external ? "_blank" : "_self"}
+              color="blue.500"
+              gridColumn={"span 1"}
+            >
+              <Text>{post.title}</Text>
             </Link>
+            <Text
+              fontSize="sm"
+              gridColumn="span 1"
+              textAlign={"right"}
+              color="gray.500"
+            >
+              {post.date}
+            </Text>
           </Stack>
         ))}
       </Flex>

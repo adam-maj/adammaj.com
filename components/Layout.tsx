@@ -67,7 +67,6 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="/writing">Writing</Navigation>
             <Navigation link="/engineering">Engineering</Navigation>
             <Navigation link="/books">Books</Navigation>
-            <Navigation link="/notes">Notes</Navigation>
           </VStack>
           <VStack align="flex-start">
             <Text fontWeight="bold" fontSize="smaller">
@@ -128,7 +127,6 @@ function Layout({ children }: PropsWithChildren) {
                       <Navigation link="/writing">Writing</Navigation>
                       <Navigation link="/engineering">Engineering</Navigation>
                       <Navigation link="/books">Books</Navigation>
-                      <Navigation link="/notes">Notes</Navigation>
                     </VStack>
                   </MenuGroup>
                   <MenuGroup title="FIND ME ON">

@@ -20,34 +20,23 @@ const Writing: NextPageWithLayout<WritingProps> = ({ posts }) => {
   return (
     <>
       <NextSeo title="Writing | Adam Majmudar" />
-      <Flex direction="column" align="flex-start">
+      <Flex direction="column" align="flex-start" width="100%" gap={3}>
+        <Divider width="100%" />
         {posts.map((post) => (
           <>
-            <Stack
-              my={1}
-              width="100%"
-              display={{ base: "flex", md: "grid" }}
-              direction={{ base: "column", md: "row" }}
-              gridTemplateColumns={"7fr 2.5fr"}
-              align="flex-start"
-            >
+            <Stack width="100%" align="flex-start" spacing={1}>
               <Link
                 href={post.url}
                 target={post.external ? "_blank" : "_self"}
-                // color="blue.500"
-                gridColumn={"span 1"}
+                color="blue.600"
               >
                 <Text>{post.title}</Text>
               </Link>
-              <Text
-                fontSize="sm"
-                gridColumn="span 1"
-                textAlign={"right"}
-                color="gray.500"
-              >
+              <Text fontSize="sm" textAlign={"right"} color="gray.500">
                 {post.date}
               </Text>
             </Stack>
+            <Divider width="100%" />
           </>
         ))}
       </Flex>

@@ -13,13 +13,20 @@ const lora = Lora({ subsets: ["latin"], display: "swap" });
 
 const theme = extendTheme(
   {
+    styles: {
+      global: ({ colorMode }) => ({
+        body: {
+          bg: colorMode === "light" ? "white" : "black",
+        },
+      }),
+    },
     fonts: {
       heading: lora.style.fontFamily,
       body: lora.style.fontFamily,
     },
   },
   withProse({
-    baseStyle: {
+    baseStyle: ({ colorMode }) => ({
       "h1, h2, h3, h4, h5, h6": {
         mt: 4,
         mb: 4,
@@ -28,9 +35,9 @@ const theme = extendTheme(
         my: 3,
       },
       a: {
-        color: "blue.500",
+        color: colorMode === "light" ? "blue.500" : "blue.300",
       },
-    },
+    }),
   })
 );
 

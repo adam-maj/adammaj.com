@@ -14,7 +14,7 @@ const lora = Lora({ subsets: ["latin"], display: "swap" });
 const theme = extendTheme(
   {
     styles: {
-      global: ({ colorMode }) => ({
+      global: ({ colorMode }: { colorMode: string }) => ({
         body: {
           bg: colorMode === "light" ? "white" : "black",
         },

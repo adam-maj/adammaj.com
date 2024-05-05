@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || getDefaultLayout;
 
   React.useEffect(() => {
-    posthog.init("phc_jFlJqpi333LZJJRxwjiFTkKI2Ufv3Pgf0hnbrPuZdLL", {
+    posthog.init(process.env.NEXT_PUBLIC_POSTHOG_API_KEY || "", {
       api_host: "https://app.posthog.com",
     });
 

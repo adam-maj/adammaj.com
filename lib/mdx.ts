@@ -33,8 +33,6 @@ export async function getMdxContent<TMetadata>(
   const hr = ``;
   const compiledSource = source.compiledSource.replaceAll(footnotes, hr);
 
-  console.log(compiledSource);
-
   return {
     metadata: source.frontmatter as TMetadata,
     source: compiledSource,

@@ -29,9 +29,11 @@ export async function getMdxContent<TMetadata>(
 
   // Remove the ugly footnotes heading from react-gfm
   const footnotes =
-    /_jsxDEV\(_components.h2, {.*?children: "Footnotes".*?}, this\), "\\n", /gs;
+    /_jsx\(_components.h2, {.*?children: "Footnotes".*?}\), "\\n", /gs;
   const hr = ``;
   const compiledSource = source.compiledSource.replaceAll(footnotes, hr);
+
+  console.log(compiledSource);
 
   return {
     metadata: source.frontmatter as TMetadata,

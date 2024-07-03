@@ -1,10 +1,9 @@
 import {
-  Heading,
   Link,
   Flex,
   Text,
   Stack,
-  HStack,
+  useColorModeValue,
   Divider,
 } from "@chakra-ui/react";
 import { getAllPostData, Post } from "../../lib/writing";
@@ -17,6 +16,8 @@ interface WritingProps {
 }
 
 const Writing: NextPageWithLayout<WritingProps> = ({ posts }) => {
+  const linkColor = useColorModeValue("blue.600", "blue.300");
+
   return (
     <>
       <NextSeo title="Writing | Adam Majmudar" />
@@ -28,7 +29,7 @@ const Writing: NextPageWithLayout<WritingProps> = ({ posts }) => {
               <Link
                 href={post.url}
                 target={post.external ? "_blank" : "_self"}
-                color="blue.600"
+                color={linkColor}
               >
                 <Text>{post.title}</Text>
               </Link>

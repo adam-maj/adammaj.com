@@ -80,11 +80,7 @@ function Layout({ children }: PropsWithChildren) {
           </VStack>
         </VStack>
       </Flex>
-      <Container
-        width={{ md: "container.md" }}
-        position="relative"
-        overflowY="show"
-      >
+      <Container width={{ md: "container.md" }} position="relative">
         <Box
           width="100%"
           bg="white"

@@ -8,6 +8,7 @@ import {
   Center,
   useDimensions,
   useBreakpointValue,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { Book } from "../lib/books";
@@ -19,6 +20,8 @@ interface BookshelfProps {
 }
 
 export function Bookshelf({ books }: BookshelfProps) {
+  const hoverColor = useColorModeValue("gray.100", "gray.800");
+
   const router = useRouter();
   const [bookIndex, setBookIndex] = React.useState(-1);
   const [scroll, setScroll] = React.useState(-200);
@@ -210,7 +213,7 @@ export function Bookshelf({ books }: BookshelfProps) {
             borderRadius="md"
             height="100%"
             width="28px"
-            _hover={{ bg: "gray.100" }}
+            _hover={{ bg: hoverColor }}
             borderRightRadius={{ base: 0, md: undefined }}
           >
             <Icon as={FaChevronLeft} boxSize={3} />
@@ -370,7 +373,7 @@ export function Bookshelf({ books }: BookshelfProps) {
             height="100%"
             borderRadius="md"
             width="28px"
-            _hover={{ bg: "gray.100" }}
+            _hover={{ bg: hoverColor }}
           >
             <Icon as={FaChevronRight} boxSize={3} />
           </Center>

@@ -13,7 +13,7 @@ import Layout from "../../components/Layout";
 import { Prose } from "@nikolovlazar/chakra-ui-prose";
 import { MDXRemote } from "next-mdx-remote";
 import { Book, getAllBooks, getAllSlugs, getBook } from "../../lib/books";
-import { Bookshelf } from "../../components/Bookshelf";
+import { Bookshelf } from "../../components/Bookshelf2";
 import { Content } from "../../lib/mdx";
 import { NextSeo } from "next-seo";
 

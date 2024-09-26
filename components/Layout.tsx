@@ -84,7 +84,7 @@ function Layout({ children }: PropsWithChildren) {
         <Box
           width="100%"
           bg="white"
-          height={20}
+          height={10}
           position="fixed"
           top={0}
           zIndex={100}

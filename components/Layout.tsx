@@ -64,8 +64,8 @@ function Layout({ children }: PropsWithChildren) {
               NAVIGATION
             </Text>
             <Navigation link="/">Home</Navigation>
+            <Navigation link="/reading">Reading</Navigation>
             <Navigation link="/writing">Writing</Navigation>
-            <Navigation link="/books">Books</Navigation>
           </VStack>
           <VStack align="flex-start">
             <Text fontWeight="bold" fontSize="smaller">
@@ -108,8 +108,8 @@ function Layout({ children }: PropsWithChildren) {
             <Flex justify="space-between" width="100%">
               <HStack spacing={8}>
                 <Navigation link="/">Home</Navigation>
+                <Navigation link="/reading">Reading</Navigation>
                 <Navigation link="/writing">Writing</Navigation>
-                <Navigation link="/books">Books</Navigation>
               </HStack>
               <Menu>
                 <MenuButton
@@ -123,8 +123,8 @@ function Layout({ children }: PropsWithChildren) {
                   <MenuGroup title="NAVIGATION">
                     <VStack align="flex-start" px={4} spacing={3} mb={4}>
                       <Navigation link="/">Home</Navigation>
+                      <Navigation link="/reading">Reading</Navigation>
                       <Navigation link="/writing">Writing</Navigation>
-                      <Navigation link="/books">Books</Navigation>
                     </VStack>
                   </MenuGroup>
                   <MenuGroup title="FIND ME ON">

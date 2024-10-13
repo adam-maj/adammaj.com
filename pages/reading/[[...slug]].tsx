@@ -120,7 +120,7 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   if (params && params.slug && params.slug.length > 1) {
     return {
       redirect: {
-        destination: "/books",
+        destination: "/reading",
       },
     };
   }
@@ -139,7 +139,7 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   if (!book) {
     return {
       redirect: {
-        destination: "/books",
+        destination: "/reading",
       },
     };
   }

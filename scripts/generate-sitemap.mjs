@@ -51,7 +51,7 @@ async function main() {
     <loc>https://adammaj.com/engineering</loc>
   </url>
   <url>
-    <loc>https://adammaj.com/books</loc>
+    <loc>https://adammaj.com/reading</loc>
   </url>
   <url>
     <loc>https://adammaj.com/notes</loc>

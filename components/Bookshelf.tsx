@@ -230,7 +230,7 @@ export function Bookshelf({ books }: BookshelfProps) {
                 onClick={() => {
                   if (index === bookIndex) {
                     setBookIndex(-1);
-                    router.push(`/books`);
+                    router.push(`/reading`);
                   } else {
                     setBookIndex(index);
                     router.push(book.slug);

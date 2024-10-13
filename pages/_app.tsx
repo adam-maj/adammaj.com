@@ -29,6 +29,9 @@ const theme = extendTheme(
       },
       a: {
         color: "blue.500",
+        _focus: {
+          boxShadow: "none !important",
+        },
       },
     },
   })

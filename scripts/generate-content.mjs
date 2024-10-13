@@ -62,7 +62,7 @@ async function books() {
 
         return {
           ...source.frontmatter,
-          slug: "/" + path.join("books", fileName.split(".")[0]),
+          slug: "/" + path.join("reading", fileName.split(".")[0]),
           summary: source.compiledSource,
         };
       })

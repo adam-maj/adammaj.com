@@ -11,6 +11,15 @@ const withMDX = require("@next/mdx")({
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
+  async redirects() {
+    return [
+      {
+        source: "/books/:slug*",
+        destination: "/reading/:slug*",
+        permanent: true,
+      },
+    ];
+  },
 });
 module.exports = withMDX({
   // Append the default value with md extensions

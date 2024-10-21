@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Energy",
+    "image": "https://pbs.twimg.com/media/GZ9diQsb0AM5qU3?format=jpg&name=large",
+    "description": "Learned about each segment of the energy industry in depth. Created a single complete resource on the energy industry and how it defines our future.",
+    "links": [
+      {
+        "label": "twitter",
+        "href": "https://x.com/MajmudarAdam/status/1846357368466297214"
+      },
+      {
+        "label": "energyandhumanity.com",
+        "href": "https://energyandhumanity.com"
+      }
+    ]
+  },
+  {
+    "title": "Deep Learning",
+    "image": "https://pbs.twimg.com/media/GOY9Th7a4AAPpR6?format=png&name=large",
+    "description": "Read and reimplemented the most important deep learning papers. Created a synthesis of the entire history of deep learning.",
+    "links": [
+      {
+        "label": "twitter",
+        "href": "https://x.com/MajmudarAdam/status/1794190796411027791"
+      },
+      {
+        "label": "adam-maj/deep-learning",
+        "href": "https://github.com/adam-maj/deep-learning"
+      }
+    ]
+  },
+  {
+    "title": "Chips",
+    "image": "https://pbs.twimg.com/media/GJ4MuQobgAAdXo5?format=png&name=large",
+    "description": "Learned about chip design, fabrication, and architecture. Designed a minimal GPU.",
+    "links": [
+      {
+        "label": "twitter: chips",
+        "href": "https://x.com/MajmudarAdam/status/1778235769150423121"
+      },
+      {
+        "label": "twitter: tiny-gpu",
+        "href": "https://x.com/MajmudarAdam/status/1783304235909877846"
+      },
+      {
+        "label": "adam-maj/tiny-gpu",
+        "href": "https://github.com/adam-maj/tiny-gpu"
+      }
+    ]
+  }
+]

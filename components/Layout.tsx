@@ -48,7 +48,7 @@ function Layout({ children }: PropsWithChildren) {
   return (
     <Container
       position="relative"
-      mt={{ base: 16, md: 20 }}
+      mt={{ base: 16 }}
       pb={{ base: 8, md: "10em" }}
       gap={{ md: 10 }}
     >
@@ -66,6 +66,7 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="/">Home</Navigation>
             <Navigation link="/reading">Reading</Navigation>
             <Navigation link="/writing">Writing</Navigation>
+            <Navigation link="/deep-dives">Deep Dives</Navigation>
           </VStack>
           <VStack align="flex-start">
             <Text fontWeight="bold" fontSize="smaller">
@@ -110,6 +111,7 @@ function Layout({ children }: PropsWithChildren) {
                 <Navigation link="/">Home</Navigation>
                 <Navigation link="/reading">Reading</Navigation>
                 <Navigation link="/writing">Writing</Navigation>
+                <Navigation link="/deep-dives">Deep Dives</Navigation>
               </HStack>
               <Menu>
                 <MenuButton
@@ -125,6 +127,7 @@ function Layout({ children }: PropsWithChildren) {
                       <Navigation link="/">Home</Navigation>
                       <Navigation link="/reading">Reading</Navigation>
                       <Navigation link="/writing">Writing</Navigation>
+                      <Navigation link="/deep-dives">Deep Dives</Navigation>
                     </VStack>
                   </MenuGroup>
                   <MenuGroup title="FIND ME ON">

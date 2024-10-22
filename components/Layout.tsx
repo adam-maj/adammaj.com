@@ -111,7 +111,6 @@ function Layout({ children }: PropsWithChildren) {
                 <Navigation link="/">Home</Navigation>
                 <Navigation link="/reading">Reading</Navigation>
                 <Navigation link="/writing">Writing</Navigation>
-                <Navigation link="/deep-dives">Deep Dives</Navigation>
               </HStack>
               <Menu>
                 <MenuButton

@@ -1,16 +1,20 @@
 [
   {
-    "title": "Energy",
-    "image": "https://pbs.twimg.com/media/GZ9diQsb0AM5qU3?format=jpg&name=large",
-    "description": "Learned about each segment of the energy industry in depth. Created a single complete resource on the energy industry and how it defines our future.",
+    "title": "Chips",
+    "image": "https://pbs.twimg.com/media/GJ4MuQobgAAdXo5?format=png&name=large",
+    "description": "Learned about chip design, fabrication, and architecture. Designed a minimal GPU.",
     "links": [
       {
-        "label": "tweet",
-        "href": "https://x.com/MajmudarAdam/status/1846357368466297214"
+        "label": "chips tweet",
+        "href": "https://x.com/MajmudarAdam/status/1778235769150423121"
       },
       {
-        "label": "energyandhumanity.com",
-        "href": "https://energyandhumanity.com"
+        "label": "gpu tweet",
+        "href": "https://x.com/MajmudarAdam/status/1783304235909877846"
+      },
+      {
+        "label": "adam-maj/tiny-gpu",
+        "href": "https://github.com/adam-maj/tiny-gpu"
       }
     ]
   },
@@ -30,21 +34,32 @@
     ]
   },
   {
-    "title": "Chips",
-    "image": "https://pbs.twimg.com/media/GJ4MuQobgAAdXo5?format=png&name=large",
-    "description": "Learned about chip design, fabrication, and architecture. Designed a minimal GPU.",
+    "title": "Energy",
+    "image": "https://pbs.twimg.com/media/GZ9diQsb0AM5qU3?format=jpg&name=large",
+    "description": "Learned about each segment of the energy industry in depth. Created a single complete resource on the energy industry and how it defines our future.",
     "links": [
       {
-        "label": "chips tweet",
-        "href": "https://x.com/MajmudarAdam/status/1778235769150423121"
+        "label": "tweet",
+        "href": "https://x.com/MajmudarAdam/status/1846357368466297214"
       },
       {
-        "label": "gpu tweet",
-        "href": "https://x.com/MajmudarAdam/status/1783304235909877846"
+        "label": "energyandhumanity.com",
+        "href": "https://energyandhumanity.com"
+      }
+    ]
+  },
+  {
+    "title": "Robotics",
+    "image": "",
+    "description": "Learned about the history of robotics research and the future of humanoids.",
+    "links": [
+      {
+        "label": "tweet",
+        "href": "https://x.com/MajmudarAdam/status/1869207420888862786"
       },
       {
-        "label": "adam-maj/tiny-gpu",
-        "href": "https://github.com/adam-maj/tiny-gpu"
+        "label": "adam-maj/robotics",
+        "href": "https://github.com/adam-maj/robotics"
       }
     ]
   }

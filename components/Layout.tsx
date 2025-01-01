@@ -9,14 +9,16 @@ import {
   MenuButton,
   IconButton,
   MenuList,
-  MenuItem,
   Icon,
   MenuGroup,
+  IconButtonProps
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { PropsWithChildren } from "react";
 import { FiMenu } from "react-icons/fi";
+
+const TypedIconButton = IconButton as React.ComponentType<IconButtonProps>;
 
 function Navigation({
   link,

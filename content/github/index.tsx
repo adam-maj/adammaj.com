@@ -1,7 +1,13 @@
 // Start of Selection
 import Script from "next/script";
 
-export function Repo({ slug }: { slug: string }) {
+export function Repo({
+  slug,
+  description,
+}: {
+  slug: string;
+  description: string;
+}) {
   // A simple approximation of the modern GitHub card using OpenGraph data
   // for the "${slug}" repository.
   return (
@@ -37,7 +43,7 @@ export function Repo({ slug }: { slug: string }) {
             {slug}
           </div>
           <div style={{ fontSize: "14px", color: "#586069" }}>
-            A minimal GPU design built from scratch
+            {description}
           </div>
         </div>
       </a>

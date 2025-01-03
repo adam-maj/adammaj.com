@@ -12,8 +12,8 @@ import {
   MenuItem,
   Icon,
   MenuGroup,
+  Link,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { PropsWithChildren } from "react";
 import { FiMenu } from "react-icons/fi";
@@ -32,14 +32,13 @@ function Navigation({
     link === "/" ? router.asPath === link : router.asPath.includes(link);
 
   return (
-    <Link href={link} target={isExternal ? "_blank" : "_self"}>
-      <Text
-        fontSize="lg"
-        color={isActive ? "black" : "gray.500"}
-        _hover={{ color: "black" }}
-      >
-        {children}
-      </Text>
+    <Link
+      href={link}
+      target={isExternal ? "_blank" : "_self"}
+      color={isActive ? "black" : "gray.500"}
+      _hover={{ color: "black" }}
+    >
+      <Text fontSize="lg">{children}</Text>
     </Link>
   );
 }

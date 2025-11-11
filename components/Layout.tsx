@@ -74,6 +74,9 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="https://twitter.com/majmudaradam" isExternal>
               Twitter
             </Navigation>
+            <Navigation link="https://substack.com/@adammaj" isExternal>
+              Substack
+            </Navigation>
             <Navigation link="https://github.com/adam-maj" isExternal>
               GitHub
             </Navigation>
@@ -135,6 +138,12 @@ function Layout({ children }: PropsWithChildren) {
                         isExternal
                       >
                         Twitter
+                      </Navigation>
+                      <Navigation
+                        link="https://substack.com/@adammaj"
+                        isExternal
+                      >
+                        Substack
                       </Navigation>
                       <Navigation link="https://github.com/adam-maj" isExternal>
                         GitHub

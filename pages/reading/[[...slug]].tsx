@@ -45,7 +45,11 @@ const Books: NextPageWithLayout<BooksProps> = ({ books, book }) => {
             </VStack>
           </Flex>
           <Prose>
-            <MDXRemote compiledSource={book.source} />
+            <MDXRemote
+              compiledSource={book.source}
+              scope={{}}
+              frontmatter={{}}
+            />
           </Prose>
         </Stack>
       </>
@@ -83,7 +87,11 @@ const Books: NextPageWithLayout<BooksProps> = ({ books, book }) => {
                       Read: {book.date} • Rating: {book.rating}/10
                     </Text>
                     <Prose>
-                      <MDXRemote compiledSource={book.summary} />
+                      <MDXRemote
+                        compiledSource={book.summary}
+                        scope={{}}
+                        frontmatter={{}}
+                      />
                     </Prose>
                   </VStack>
                 </Flex>

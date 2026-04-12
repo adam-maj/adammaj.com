@@ -49,7 +49,7 @@ function getDistance([first, second]: Point[]) {
 }
 
 function getPointerValues(
-  pointers: Map<number, Point>
+  pointers: Map<number, Point>,
 ): [Point, Point] | [Point] | [] {
   const values: Point[] = [];
 
@@ -69,7 +69,7 @@ function getPointerValues(
 }
 
 function getFirstPointerEntry(
-  pointers: Map<number, Point>
+  pointers: Map<number, Point>,
 ): [number, Point] | undefined {
   let firstEntry: [number, Point] | undefined;
 
@@ -173,7 +173,8 @@ const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
       if (points.length === 2) {
         const distance = getDistance(points);
         updateZoom(
-          pinchStartZoomRef.current * (distance / pinchStartDistanceRef.current)
+          pinchStartZoomRef.current *
+            (distance / pinchStartDistanceRef.current),
         );
       }
       return;
@@ -186,7 +187,8 @@ const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
     ) {
       event.preventDefault();
       viewport.scrollLeft =
-        panStartRef.current.scrollLeft - (point.x - panStartRef.current.point.x);
+        panStartRef.current.scrollLeft -
+        (point.x - panStartRef.current.point.x);
       viewport.scrollTop =
         panStartRef.current.scrollTop - (point.y - panStartRef.current.point.y);
     }

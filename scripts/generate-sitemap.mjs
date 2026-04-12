@@ -54,6 +54,9 @@ async function main() {
     <loc>https://adammaj.com/reading</loc>
   </url>
   <url>
+    <loc>https://adammaj.com/drawings</loc>
+  </url>
+  <url>
     <loc>https://adammaj.com/notes</loc>
   </url>${allSlugs
     .map((slug) => {

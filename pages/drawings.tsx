@@ -48,6 +48,40 @@ function getDistance([first, second]: Point[]) {
   return Math.hypot(second.x - first.x, second.y - first.y);
 }
 
+function getPointerValues(
+  pointers: Map<number, Point>,
+): [Point, Point] | [Point] | [] {
+  const values: Point[] = [];
+
+  pointers.forEach((point) => {
+    values.push(point);
+  });
+
+  if (values.length >= 2) {
+    return [values[0], values[1]];
+  }
+
+  if (values.length === 1) {
+    return [values[0]];
+  }
+
+  return [];
+}
+
+function getFirstPointerEntry(
+  pointers: Map<number, Point>,
+): [number, Point] | undefined {
+  let firstEntry: [number, Point] | undefined;
+
+  pointers.forEach((point, pointerId) => {
+    if (!firstEntry) {
+      firstEntry = [pointerId, point];
+    }
+  });
+
+  return firstEntry;
+}
+
 const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
   const [selectedDrawing, setSelectedDrawing] = useState<Drawing | null>(null);
   const [zoom, setZoom] = useState(MIN_ZOOM);
@@ -115,9 +149,10 @@ const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
     }
 
     if (pointersRef.current.size === 2) {
-      pinchStartDistanceRef.current = getDistance([
-        ...pointersRef.current.values(),
-      ]);
+      const points = getPointerValues(pointersRef.current);
+      if (points.length === 2) {
+        pinchStartDistanceRef.current = getDistance(points);
+      }
       pinchStartZoomRef.current = zoomRef.current;
       panStartRef.current = null;
     }
@@ -134,10 +169,14 @@ const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
 
     if (pointersRef.current.size === 2 && pinchStartDistanceRef.current) {
       event.preventDefault();
-      const distance = getDistance([...pointersRef.current.values()]);
-      updateZoom(
-        pinchStartZoomRef.current * (distance / pinchStartDistanceRef.current)
-      );
+      const points = getPointerValues(pointersRef.current);
+      if (points.length === 2) {
+        const distance = getDistance(points);
+        updateZoom(
+          pinchStartZoomRef.current *
+            (distance / pinchStartDistanceRef.current),
+        );
+      }
       return;
     }
 
@@ -148,7 +187,8 @@ const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
     ) {
       event.preventDefault();
       viewport.scrollLeft =
-        panStartRef.current.scrollLeft - (point.x - panStartRef.current.point.x);
+        panStartRef.current.scrollLeft -
+        (point.x - panStartRef.current.point.x);
       viewport.scrollTop =
         panStartRef.current.scrollTop - (point.y - panStartRef.current.point.y);
     }
@@ -162,7 +202,7 @@ const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
       pinchStartZoomRef.current = zoomRef.current;
     }
 
-    const remainingPointer = [...pointersRef.current.entries()][0];
+    const remainingPointer = getFirstPointerEntry(pointersRef.current);
     if (remainingPointer && viewportRef.current && zoomRef.current > MIN_ZOOM) {
       const [pointerId, point] = remainingPointer;
       panStartRef.current = {
@@ -307,7 +347,7 @@ const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
                   onPointerUp={handlePointerUp}
                   onPointerCancel={handlePointerUp}
                   onPointerLeave={handlePointerUp}
-                  touchAction="none"
+                  style={{ touchAction: "none" }}
                 >
                   <Flex
                     minH="100%"

@@ -22,10 +22,10 @@ import {
   type WheelEvent as ReactWheelEvent,
 } from "react";
 import Layout from "../components/Layout";
-import { Drawing, getDrawings } from "../lib/drawings";
+import { Drawing, getDrawingItems } from "../lib/drawing";
 
-interface DrawingsPageProps {
-  drawings: Drawing[];
+interface DrawingPageProps {
+  drawingItems: Drawing[];
 }
 
 const MIN_ZOOM = 1;
@@ -82,7 +82,9 @@ function getFirstPointerEntry(
   return firstEntry;
 }
 
-const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
+const DrawingPage: NextPageWithLayout<DrawingPageProps> = ({
+  drawingItems,
+}) => {
   const [selectedDrawing, setSelectedDrawing] = useState<Drawing | null>(null);
   const [zoom, setZoom] = useState(MIN_ZOOM);
   const viewportRef = useRef<HTMLDivElement | null>(null);
@@ -282,10 +284,10 @@ const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
 
   return (
     <>
-      <NextSeo title="Drawings | Adam Majmudar" />
+      <NextSeo title="Drawing | Adam Majmudar" />
       <VStack width="100%" spacing={0} align="stretch">
         <Divider width="100%" />
-        {drawings.map((drawing, index) => (
+        {drawingItems.map((drawing, index) => (
           <Fragment key={`${drawing.title}-${drawing.date}-${index}`}>
             <VStack width="100%" spacing={3} py={7} align="stretch">
               <Box
@@ -316,7 +318,9 @@ const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
                 </Text>
               </VStack>
             </VStack>
-            {index < drawings.length - 1 && <Divider width="100%" my={3} />}
+            {index < drawingItems.length - 1 && (
+              <Divider width="100%" my={3} />
+            )}
           </Fragment>
         ))}
         <Divider width="100%" />
@@ -376,14 +380,14 @@ const DrawingsPage: NextPageWithLayout<DrawingsPageProps> = ({ drawings }) => {
   );
 };
 
-DrawingsPage.getLayout = (page) => <Layout>{page}</Layout>;
+DrawingPage.getLayout = (page) => <Layout>{page}</Layout>;
 
 export async function getStaticProps() {
   return {
     props: {
-      drawings: getDrawings(),
+      drawingItems: getDrawingItems(),
     },
   };
 }
 
-export default DrawingsPage;
+export default DrawingPage;

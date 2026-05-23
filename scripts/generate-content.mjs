@@ -2,7 +2,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 import fs from "fs";
 
-process.env.NODE_ENV = "production";
+const isDevelopment = process.env.NODE_ENV === "development";
 
 async function writing() {
   const metadata = [];
@@ -20,7 +20,7 @@ async function writing() {
         const fileContents = fs.readFileSync(contentPath, "utf8");
         const source = await serialize(fileContents, {
           parseFrontmatter: true,
-          mdxOptions: { development: false },
+          mdxOptions: { development: isDevelopment },
         });
 
         return {
@@ -59,7 +59,7 @@ async function books() {
           .split("## My Notes")[0];
         const source = await serialize(fileContents, {
           parseFrontmatter: true,
-          mdxOptions: { development: false },
+          mdxOptions: { development: isDevelopment },
         });
 
         return {
@@ -82,6 +82,40 @@ async function books() {
   );
 }
 
+async function inspiration() {
+  const basePath = path.join(process.cwd(), "content", "inspiration");
+
+  const itemPaths = fs.readdirSync(basePath, "utf8");
+  const items = await Promise.all(
+    itemPaths
+      .filter((fileName) => fileName.includes(".mdx"))
+      .map(async (fileName) => {
+        const contentPath = path.join(basePath, fileName);
+        const fileContents = fs.readFileSync(contentPath, "utf8");
+        const source = await serialize(fileContents, {
+          parseFrontmatter: true,
+          mdxOptions: { development: isDevelopment },
+        });
+
+        return {
+          ...source.frontmatter,
+          description: source.compiledSource,
+        };
+      })
+  );
+
+  items.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime();
+  });
+
+  fs.writeFileSync(
+    path.join(basePath, "index.json"),
+    JSON.stringify(items, undefined, 2)
+  );
+}
+
 async function engineering() {
   const metadata = [];
   const basePath = path.join(process.cwd(), "content", "engineering");
@@ -98,7 +132,7 @@ async function engineering() {
         const fileContents = fs.readFileSync(contentPath, "utf8");
         const source = await serialize(fileContents, {
           parseFrontmatter: true,
-          mdxOptions: { development: false },
+          mdxOptions: { development: isDevelopment },
         });
 
         return {
@@ -126,6 +160,7 @@ async function engineering() {
 async function main() {
   await writing();
   await books();
+  await inspiration();
   await engineering();
 }
 

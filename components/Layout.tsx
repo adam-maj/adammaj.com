@@ -65,7 +65,8 @@ function Layout({ children }: PropsWithChildren) {
             <Navigation link="/">Home</Navigation>
             <Navigation link="/reading">Reading</Navigation>
             <Navigation link="/writing">Writing</Navigation>
-            <Navigation link="/drawings">Drawings</Navigation>
+            <Navigation link="/drawing">Drawing</Navigation>
+            <Navigation link="/inspiration">Inspiration</Navigation>
             <Navigation link="/deep-dives">Deep Dives</Navigation>
           </VStack>
           <VStack align="flex-start">
@@ -129,7 +130,8 @@ function Layout({ children }: PropsWithChildren) {
                       <Navigation link="/">Home</Navigation>
                       <Navigation link="/reading">Reading</Navigation>
                       <Navigation link="/writing">Writing</Navigation>
-                      <Navigation link="/drawings">Drawings</Navigation>
+                      <Navigation link="/drawing">Drawing</Navigation>
+                      <Navigation link="/inspiration">Inspiration</Navigation>
                       <Navigation link="/deep-dives">Deep Dives</Navigation>
                     </VStack>
                   </MenuGroup>

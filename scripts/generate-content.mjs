@@ -105,6 +105,13 @@ async function inspiration() {
   );
 
   items.sort((a, b) => {
+    const indexA = Number(a.index ?? 0);
+    const indexB = Number(b.index ?? 0);
+
+    if (indexA !== indexB) {
+      return indexB - indexA;
+    }
+
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
     return dateB.getTime() - dateA.getTime();

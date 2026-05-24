@@ -5,6 +5,7 @@ export interface InspirationItem {
   title: string;
   size: "small" | "large";
   tag: "music" | "animation" | "video" | "place" | "game";
+  index: number;
   date: string;
   description: string;
   image: string;

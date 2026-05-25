@@ -4,7 +4,7 @@ import path from "path";
 export interface InspirationItem {
   title: string;
   size: "small" | "large";
-  tag: "music" | "animation" | "video" | "place" | "game";
+  tag: "music" | "animation" | "video" | "location" | "game";
   index: number;
   date: string;
   description: string;

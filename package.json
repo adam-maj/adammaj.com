@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn generate && next dev",
-    "build": "yarn generate && next build",
+    "dev": "NODE_ENV=development yarn generate && next dev",
+    "build": "NODE_ENV=production yarn generate && next build",
     "start": "next start",
     "lint": "next lint",
     "generate": "node scripts/generate-content.mjs",

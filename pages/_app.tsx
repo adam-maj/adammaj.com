@@ -64,11 +64,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <DefaultSeo
         title="Adam Majmudar"
-        description="about me + my reading, drawings, writing, and deep dives"
+        description="about me + my reading, drawing, writing, and deep dives"
         openGraph={{
           title: "Adam Majmudar",
           description:
-            "about me + my reading, drawings, writing, and deep dives",
+            "about me + my reading, drawing, writing, and deep dives",
           images: [
             {
               url: "https://adammaj.com/og-image-dark.jpg",

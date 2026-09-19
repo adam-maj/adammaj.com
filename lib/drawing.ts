@@ -12,15 +12,15 @@ function getDrawingTimestamp(date: string): number | undefined {
   return Number.isNaN(timestamp) ? undefined : timestamp;
 }
 
-export function getDrawings(): Drawing[] {
-  const drawings: Drawing[] = JSON.parse(
+export function getDrawingItems(): Drawing[] {
+  const drawingItems: Drawing[] = JSON.parse(
     fs.readFileSync(
-      path.join(process.cwd(), "content", "drawings", "data.json"),
+      path.join(process.cwd(), "content", "drawing", "data.json"),
       "utf8"
     )
   );
 
-  return drawings
+  return drawingItems
     .map((drawing, index) => ({
       drawing,
       index,
